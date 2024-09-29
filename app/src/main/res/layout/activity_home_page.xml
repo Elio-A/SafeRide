@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/home_activity_backgroud_dradient"
+    tools:context=".home_page_activity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+        <ImageView
+            android:id="@+id/saferide_image1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:scaleType="fitStart"
+            android:src="@drawable/saferide_homepage" />
+
+        <Button
+            android:id="@+id/pickup_stations_button"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="300dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/rectangle_button_background"
+            android:hint="@string/pick_up_stations"
+            android:textSize="30sp"
+            />
+
+        <Button
+            android:id="@+id/radius_button"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="300dp"
+            android:layout_marginStart="240dp"
+            android:background="@drawable/rectangle_button_background"
+            android:hint="@string/radius"
+            android:textSize="30sp"
+            />
+
+        <Button
+            android:id="@+id/working_hours_button"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="425dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/rectangle_button_background"
+            android:hint="@string/working_hours"
+            android:textSize="30sp"
+            />
+
+        <Button
+            android:id="@+id/information_button"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="425dp"
+            android:layout_marginStart="240dp"
+            android:background="@drawable/rectangle_button_background"
+            android:hint="@string/information"
+            android:textSize="30sp"
+            />
+
+
+
+    </RelativeLayout>
+
+</RelativeLayout>
