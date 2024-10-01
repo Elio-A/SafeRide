@@ -11,4 +11,6 @@
     <string name="login_failed">"Login failed"</string>
     <string name="button">button</string>
     <string name="about_us">About Us</string>
+    <string name="qr_code_scanner">QR Code Scanner</string>
+    <string name="radius">Radius</string>
 </resources>

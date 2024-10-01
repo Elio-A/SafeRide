@@ -18,7 +18,7 @@ class Aboutus : AppCompatActivity() {
             insets
         }
 
-        val backID =findViewById<Button>(R.id.backButton)
+        val backID = findViewById<Button>(R.id.backButton)
 
         backID.setOnClickListener {
             finish()

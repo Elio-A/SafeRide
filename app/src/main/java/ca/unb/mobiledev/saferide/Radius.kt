@@ -1,6 +1,7 @@
 package ca.unb.mobiledev.saferide
 
 import android.os.Bundle
+import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
@@ -16,5 +17,12 @@ class Radius : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val backID = findViewById<Button>(R.id.backButton)
+        backID.setOnClickListener {
+            finish()
+        }
     }
+
+
 }
