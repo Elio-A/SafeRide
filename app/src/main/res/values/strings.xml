@@ -9,4 +9,15 @@
     <string name="invalid_username">Not a valid username</string>
     <string name="invalid_password">Password must be >5 characters</string>
     <string name="login_failed">"Login failed"</string>
+    <string name="pick_up_stations">Pickup Stations</string>
+    <string name="radius_home">Radius</string>
+    <string name="working_hours">Working Hours</string>
+    <string name="information">Info</string>
+    <string name="news">News</string>
+    <string name="qr_code">QR Code</string>
+
+    <string name="about_us">About Us</string>
+    <string name="button">Button</string>
+    <string name="qr_code_scanner">QR Code</string>
+    <string name="radius">Radius</string>
 </resources>
