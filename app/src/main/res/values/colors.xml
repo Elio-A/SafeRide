@@ -18,4 +18,6 @@
 
     <color name="dimgrey">#696969</color>
     <color name="purple">#BB86FC</color>
+
+    <color name="red">#FF0000</color>
 </resources>
