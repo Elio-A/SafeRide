@@ -1,5 +1,6 @@
 package ca.unb.mobiledev.saferide
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
@@ -22,7 +23,7 @@ class HomePageActivity : AppCompatActivity(){
         val stationButton : Button = findViewById(R.id.pickup_stations_button) //What's wrong with this?
         val radiusButton : Button = findViewById(R.id.radius_button)
         val workingHourButton : Button = findViewById(R.id.working_hours_button)
-        val informationButton : Button = findViewById(R.id.information_button)
+        val aboutUsButton : Button = findViewById(R.id.about_us_button)
 
         stationButton.setOnClickListener{
             //Go to that activity
@@ -36,8 +37,9 @@ class HomePageActivity : AppCompatActivity(){
 
         }
 
-        informationButton.setOnClickListener{
-
+        aboutUsButton.setOnClickListener{
+            val intent = Intent(this@HomePageActivity, Aboutus::class.java)
+            startActivity(intent)
         }
     }
 }//End HomePageActivity
