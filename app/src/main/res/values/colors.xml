@@ -3,4 +3,19 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="saferideOrange">#D65E3A</color>
+
+    <!--Added the following colors-->
+    <color name="saferide_orange">#D65E3A</color>
+
+    <color name="softblue">#B3E5FC</color>
+    <color name="coral">#FF6F61</color>
+
+    <color name="lightgrey">#F5F5F5</color>
+    <color name="teal">#3F51B5</color>
+
+    <color name="blackberry">#3A3A38</color>
+    <color name="chargrey">#36454F</color>
+
+    <color name="dimgrey">#696969</color>
+    <color name="purple">#BB86FC</color>
 </resources>

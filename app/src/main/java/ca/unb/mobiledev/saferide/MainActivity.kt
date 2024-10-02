@@ -1,5 +1,6 @@
 package ca.unb.mobiledev.saferide
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
@@ -20,5 +21,12 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        //Moving from main to home page using the button:
+        val goToHomePageButton: Button = findViewById(R.id.next_activity)
+        goToHomePageButton.setOnClickListener{
+            val intent = Intent(this@MainActivity, HomePageActivity::class.java)
+            startActivity(intent)
+        }
     }
-}
+}//End MainActivity

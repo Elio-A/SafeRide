@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/home_activity_backgroud_dradient"
-    tools:context=".home_page_activity">
+    tools:context=".HomePageActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -26,10 +26,11 @@
             android:layout_width="200dp"
             android:layout_height="100dp"
             android:layout_marginTop="300dp"
-            android:layout_marginStart="10dp"
-            android:background="@drawable/rectangle_button_background"
+            android:layout_marginStart="3dp"
+            android:backgroundTint="@color/dimgrey"
             android:hint="@string/pick_up_stations"
             android:textSize="30sp"
+            android:textColorHint="@color/saferide_orange"
             />
 
         <Button
@@ -37,10 +38,11 @@
             android:layout_width="200dp"
             android:layout_height="100dp"
             android:layout_marginTop="300dp"
-            android:layout_marginStart="240dp"
-            android:background="@drawable/rectangle_button_background"
-            android:hint="@string/radius"
+            android:layout_marginStart="209dp"
+            android:backgroundTint="@color/dimgrey"
+            android:hint="@string/radius_home"
             android:textSize="30sp"
+            android:textColorHint="@color/saferide_orange"
             />
 
         <Button
@@ -48,10 +50,11 @@
             android:layout_width="200dp"
             android:layout_height="100dp"
             android:layout_marginTop="425dp"
-            android:layout_marginStart="10dp"
-            android:background="@drawable/rectangle_button_background"
+            android:layout_marginStart="3dp"
+            android:backgroundTint="@color/dimgrey"
             android:hint="@string/working_hours"
             android:textSize="30sp"
+            android:textColorHint="@color/purple"
             />
 
         <Button
@@ -59,10 +62,35 @@
             android:layout_width="200dp"
             android:layout_height="100dp"
             android:layout_marginTop="425dp"
-            android:layout_marginStart="240dp"
-            android:background="@drawable/rectangle_button_background"
+            android:layout_marginStart="209dp"
+            android:backgroundTint="@color/dimgrey"
             android:hint="@string/information"
             android:textSize="30sp"
+            android:textColorHint="@color/purple"
+            />
+
+        <Button
+            android:id="@+id/news_button"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="550dp"
+            android:layout_marginStart="209dp"
+            android:backgroundTint="@color/dimgrey"
+            android:hint="@string/news"
+            android:textSize="30sp"
+            android:textColorHint="@color/white"
+            />
+
+        <Button
+            android:id="@+id/qr_code_button"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="550dp"
+            android:layout_marginStart="3dp"
+            android:backgroundTint="@color/dimgrey"
+            android:hint="@string/qr_code"
+            android:textSize="30sp"
+            android:textColorHint="@color/lightgrey"
             />
 
 
