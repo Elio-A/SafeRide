@@ -57,8 +57,8 @@
         app:layout_constraintTop_toTopOf="parent">
 
         <RelativeLayout
-            android:layout_width="411dp"
-            android:layout_height="665dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
@@ -69,9 +69,8 @@
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentStart="true"
                 android:layout_alignParentTop="true"
-                android:layout_alignParentEnd="true"
+                android:layout_centerHorizontal="true"
                 android:layout_marginStart="70dp"
                 android:layout_marginTop="30dp"
                 android:layout_marginEnd="70dp"
@@ -83,9 +82,10 @@
 
             <TextView
                 android:id="@+id/textView3"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView2"
+                android:layout_centerHorizontal="true"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="50dp"
                 android:layout_marginRight="20dp"
@@ -97,9 +97,10 @@
 
             <TextView
                 android:id="@+id/textView4"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView3"
+                android:layout_centerHorizontal="true"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
@@ -111,9 +112,10 @@
 
             <TextView
                 android:id="@+id/textView5"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView4"
+                android:layout_centerHorizontal="true"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
@@ -123,9 +125,10 @@
 
             <TextView
                 android:id="@+id/textView6"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView5"
+                android:layout_centerHorizontal="true"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
@@ -137,9 +140,10 @@
 
             <TextView
                 android:id="@+id/textView7"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView6"
+                android:layout_centerHorizontal="true"
                 android:layout_marginLeft="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginRight="20dp"
@@ -151,9 +155,10 @@
 
             <TextView
                 android:id="@+id/textView8"
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/textView7"
+                android:layout_centerHorizontal="true"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="20dp"
@@ -188,32 +193,35 @@
                 android:textColor="@color/red"
                 android:textSize="16sp" />
 
-            <ImageView
-                android:id="@+id/imageView2"
-                android:layout_width="180dp"
-                android:layout_height="180dp"
-                android:contentDescription="STU Logo"
-                android:layout_below="@+id/textView9"
-                android:layout_alignParentStart="true"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="30dp"
-                android:background="@color/white"
-                app:srcCompat="@drawable/stulogo" />
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/textView9"
+                android:layout_centerHorizontal="true">
 
-            <ImageView
-                android:id="@+id/imageView4"
-                android:layout_width="180dp"
-                android:layout_height="180dp"
-                android:layout_below="@+id/textView9"
-                android:layout_marginTop="30dp"
-                android:layout_marginStart="10dp"
-                android:background="@color/white"
-                android:layout_toEndOf="@+id/imageView2"
-                android:contentDescription="GSA Logo"
-                app:srcCompat="@drawable/gsalogo" />
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginBottom="30dp"
+                    android:background="@color/white"
+                    android:contentDescription="STU Logo"
+                    app:srcCompat="@drawable/stulogo" />
 
+                <ImageView
+                    android:id="@+id/imageView4"
+                    android:layout_width="180dp"
+                    android:layout_height="180dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="30dp"
+                    android:layout_toEndOf="@+id/imageView2"
+                    android:background="@color/white"
+                    android:contentDescription="GSA Logo"
+                    app:srcCompat="@drawable/gsalogo" />
 
+            </RelativeLayout>
         </RelativeLayout>
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>
