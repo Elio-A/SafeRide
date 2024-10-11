@@ -3,11 +3,11 @@ package MockData;
 public class User {
     private String firstName;
     private String lastName;
-    private final int studentNumber;
+    private final String studentNumber;
     private String email;
     private String password;
 
-    public User(String firstName, String lastName, int studentNumber, String email, String password){
+    public User(String firstName, String lastName, String studentNumber, String email, String password){
         this.firstName = firstName;
         this.lastName = lastName;
         this.studentNumber = studentNumber;
@@ -23,7 +23,7 @@ public class User {
         return lastName;
     }
 
-    public int getStudentNumber() {
+    public String getStudentNumber() {
         return studentNumber;
     }
 

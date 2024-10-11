@@ -8,6 +8,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import MockData.*
+import android.content.ContentValues.TAG
+import android.nfc.Tag
 
 class LoginPage : AppCompatActivity() {
 
@@ -35,6 +38,14 @@ class LoginPage : AppCompatActivity() {
         loginButton.setOnClickListener {
             val username = usernameInput.text.toString()
             val password = passwordInput.text.toString()
+
+            val test : Boolean = MockDataMain.isAUser(username)
+            if(test == true){
+                Log.i(TAG, "Logged In Successfully!")
+            }
+            else{
+                Log.i(TAG,"GTFO!")
+            }
             Log.i("Test Credentials", "Username: $username and Password: $password")
         }
     }
