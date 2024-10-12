@@ -40,7 +40,7 @@ class LoginPage : AppCompatActivity() {
             val password = passwordInput.text.toString()
 
             val test : Boolean = MockDataMain.isAUser(username)
-            if(test == true){
+            if(test){
                 Log.i(TAG, "Logged In Successfully!")
             }
             else{
