@@ -10,7 +10,7 @@
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -27,7 +27,7 @@
 
             <Button
                 android:id="@+id/pickup_stations_button"
-                android:layout_width="match_parent"
+                android:layout_width="358dp"
                 android:layout_height="89dp"
                 android:layout_marginTop="16dp"
                 android:backgroundTint="@color/dimgrey"
@@ -37,7 +37,7 @@
 
             <Button
                 android:id="@+id/radius_button"
-                android:layout_width="match_parent"
+                android:layout_width="358dp"
                 android:layout_height="89dp"
                 android:backgroundTint="@color/dimgrey"
                 android:hint="@string/radius_home"
@@ -46,7 +46,7 @@
 
             <Button
                 android:id="@+id/working_hours_button"
-                android:layout_width="match_parent"
+                android:layout_width="358dp"
                 android:layout_height="89dp"
                 android:layout_alignBottom="@+id/radius_button"
                 android:layout_centerHorizontal="true"
@@ -58,7 +58,7 @@
 
             <Button
                 android:id="@+id/about_us_button"
-                android:layout_width="match_parent"
+                android:layout_width="358dp"
                 android:layout_height="89dp"
                 android:layout_alignBottom="@+id/working_hours_button"
                 android:layout_centerHorizontal="true"
@@ -70,7 +70,7 @@
 
             <Button
                 android:id="@+id/news_button"
-                android:layout_width="match_parent"
+                android:layout_width="358dp"
                 android:layout_height="89dp"
                 android:layout_alignBottom="@+id/about_us_button"
                 android:layout_centerHorizontal="true"
