@@ -30,7 +30,8 @@ class HomePageActivity : AppCompatActivity(){
         }
 
         radiusButton.setOnClickListener{
-
+            val intent = Intent(this@HomePageActivity, Radius::class.java)
+            startActivity(intent)
         }
 
         workingHourButton.setOnClickListener{

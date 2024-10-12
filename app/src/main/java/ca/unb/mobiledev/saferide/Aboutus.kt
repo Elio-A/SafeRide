@@ -1,11 +1,13 @@
 package ca.unb.mobiledev.saferide
 
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Button
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import android.content.Intent
 
 class Aboutus : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,9 +21,16 @@ class Aboutus : AppCompatActivity() {
         }
 
         val backID = findViewById<Button>(R.id.backButton)
+        val MessageID = findViewById<Button>(R.id.messageUs)
 
         backID.setOnClickListener {
             finish()
+        }
+
+        MessageID.setOnClickListener {
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse("http://m.me/UNBSUSafeRide")
+            startActivity(intent)
         }
     }
 }
