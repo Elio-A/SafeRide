@@ -35,7 +35,8 @@ class HomePageActivity : AppCompatActivity(){
         }
 
         workingHourButton.setOnClickListener{
-
+            val intent = Intent(this@HomePageActivity, WorkingHours::class.java)
+            startActivity(intent)
         }
 
         aboutUsButton.setOnClickListener{

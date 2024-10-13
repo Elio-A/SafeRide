@@ -4,10 +4,14 @@
     <selectionStates>
       <SelectionState runConfigName="app">
         <option name="selectionMode" value="DROPDOWN" />
+<<<<<<< Updated upstream
         <DropdownSelection timestamp="2024-10-03T01:37:53.166553Z">
+=======
+        <DropdownSelection timestamp="2024-10-03T16:51:45.017567500Z">
+>>>>>>> Stashed changes
           <Target type="DEFAULT_BOOT">
             <handle>
-              <DeviceId pluginId="LocalEmulator" identifier="path=C:\Users\jugel\.android\avd\Medium_Phone_API_27.avd" />
+              <DeviceId pluginId="PhysicalDevice" identifier="serial=R58M94K1QMX" />
             </handle>
           </Target>
         </DropdownSelection>
