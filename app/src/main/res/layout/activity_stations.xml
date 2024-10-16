@@ -1,10 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/home_activity_backgroud_dradient"
     tools:context=".stations">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="16dp">
+
+                <ImageButton
+                    android:id="@+id/back_to_home_button"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:src="@drawable/back_arrow_image"
+                    android:contentDescription="Back Button"/>
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginStart="50dp"
+                    android:hint="Pick-up Stations"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textColorHint="@color/white"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/stations_map_image"
+                android:layout_width="match_parent"
+                android:layout_height="252dp"
+                android:src="@drawable/stations_map" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:text="You can find four pickup stations on campus.  Three of which are currently in action and one that is coming soon."
+            />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:text=" - The first pickup station is located at Headhall's main entrance."
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:text=" - The second pickup station is located at the Richard J Currie Center's main entrance."
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:text=" - The third pickup station is located at the Student Union Building's top entrance."
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:text=" - The fourth and last pickup station will be located in Saint Thomas University's parking lot."
+                />
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
