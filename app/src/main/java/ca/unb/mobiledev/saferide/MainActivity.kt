@@ -28,5 +28,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this@MainActivity, HomePageActivity::class.java)
             startActivity(intent)
         }
+
+        val goToSafeRideCars: Button = findViewById(R.id.saferide_cars_activity)
+        goToSafeRideCars.setOnClickListener {
+            val intent = Intent(this@MainActivity, SafeRideCars::class.java)
+            startActivity(intent)
+        }
     }
 }//End MainActivity

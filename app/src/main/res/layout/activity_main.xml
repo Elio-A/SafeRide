@@ -20,6 +20,16 @@
             android:textColor="@color/white"
             android:background="@drawable/rectangle_button_background"/>
 
+        <Button
+            android:id="@+id/saferide_cars_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="80dp"
+            android:hint="Go To saferide cars Page"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:background="@drawable/rectangle_button_background"/>
+
 
     </RelativeLayout>
 
