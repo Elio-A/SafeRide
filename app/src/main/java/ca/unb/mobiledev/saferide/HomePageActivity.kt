@@ -26,7 +26,8 @@ class HomePageActivity : AppCompatActivity(){
         val aboutUsButton : Button = findViewById(R.id.about_us_button)
 
         stationButton.setOnClickListener{
-            //Go to that activity
+            val intent = Intent(this@HomePageActivity, stations::class.java)
+            startActivity(intent)
         }
 
         radiusButton.setOnClickListener{
@@ -35,7 +36,8 @@ class HomePageActivity : AppCompatActivity(){
         }
 
         workingHourButton.setOnClickListener{
-
+            val intent = Intent(this@HomePageActivity, WorkingHours::class.java)
+            startActivity(intent)
         }
 
         aboutUsButton.setOnClickListener{
