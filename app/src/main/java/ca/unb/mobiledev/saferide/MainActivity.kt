@@ -34,5 +34,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this@MainActivity, LoginPage::class.java)
             startActivity(intent)
         }
+
+        val carPhotosButton: Button = findViewById(R.id.go_to_Car_photos)
+        carPhotosButton.setOnClickListener {
+            val intent = Intent(this@MainActivity, CarPhotos::class.java)
+            startActivity(intent)
+        }
     }
 }//End MainActivity

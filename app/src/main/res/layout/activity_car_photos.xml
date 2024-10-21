@@ -47,13 +47,13 @@
             app:layout_constraintTop_toTopOf="parent" />
 
         <Button
-            android:id="@+id/nextButton"
+            android:id="@+id/nextCarButton"
             android:layout_width="50dp"
             android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
             android:layout_marginEnd="0dp"
             android:background="@color/transparent"
-            android:enabled="false"
+            android:enabled="true"
             android:text="@string/button"
             app:icon="?attr/homeAsUpIndicator"
             app:iconSize="30dp"
@@ -67,9 +67,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="60dp"
-        app:layout_constraintBottom_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -97,27 +97,27 @@
                 android:layout_below="@+id/FrontText"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
                 android:background="@drawable/square_with_dashes"
-                >
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
                 <Button
                     android:id="@+id/ImageFront"
                     android:layout_width="300dp"
                     android:layout_height="300dp"
+                    android:background="@color/transparent"
                     android:text="@string/plus_Sign"
                     android:textColor="@color/saferideOrange"
-                    android:background="@color/transparent"
                     android:textSize="30sp" />
 
                 <ImageView
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:visibility="gone">
-
-                </ImageView>
-
+                    android:id="@+id/FrontImage"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:contentDescription="@string/front_image"
+                    android:visibility="gone"
+                    android:scaleType="centerCrop"
+                    />
             </FrameLayout>
 
             <TextView
@@ -147,18 +147,18 @@
                     android:background="@color/transparent"
                     android:text="@string/plus_Sign"
                     android:textColor="@color/saferideOrange"
-                    android:textSize="30sp"
-                    >
+                    android:textSize="30sp">
 
                 </Button>
 
                 <ImageView
+                    android:id="@+id/RightImage"
                     android:layout_width="300dp"
                     android:layout_height="300dp"
-                    android:visibility="gone">
-
-                </ImageView>
-
+                    android:contentDescription="@string/right_image"
+                    android:visibility="gone"
+                    android:scaleType="centerCrop"
+                    />
             </FrameLayout>
 
             <TextView
@@ -177,10 +177,9 @@
                 android:layout_width="300dp"
                 android:layout_height="300dp"
                 android:layout_below="@+id/BackText"
-                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
-                android:background="@drawable/square_with_dashes"
-                >
+                android:layout_marginTop="10dp"
+                android:background="@drawable/square_with_dashes">
 
                 <Button
                     android:id="@+id/ImageBack"
@@ -189,17 +188,18 @@
                     android:background="@color/transparent"
                     android:text="@string/plus_Sign"
                     android:textColor="@color/saferideOrange"
-                    android:textSize="30sp"
-                    >
+                    android:textSize="30sp">
 
                 </Button>
 
                 <ImageView
+                    android:id="@+id/BackImage"
                     android:layout_width="300dp"
                     android:layout_height="300dp"
-                    android:visibility="gone">
-
-                </ImageView>
+                    android:contentDescription="@string/back_image"
+                    android:visibility="gone"
+                    android:scaleType="centerCrop"
+                    />
             </FrameLayout>
 
             <TextView
@@ -218,10 +218,9 @@
                 android:layout_width="300dp"
                 android:layout_height="300dp"
                 android:layout_below="@+id/LeftText"
-                android:layout_marginTop="10dp"
                 android:layout_centerHorizontal="true"
-                android:background="@drawable/square_with_dashes"
-                >
+                android:layout_marginTop="10dp"
+                android:background="@drawable/square_with_dashes">
 
                 <Button
                     android:id="@+id/ImageLeft"
@@ -230,17 +229,18 @@
                     android:background="@color/transparent"
                     android:text="@string/plus_Sign"
                     android:textColor="@color/saferideOrange"
-                    android:textSize="30sp"
-                    >
+                    android:textSize="30sp">
 
                 </Button>
 
                 <ImageView
+                    android:id="@+id/LeftImage"
                     android:layout_width="300dp"
                     android:layout_height="300dp"
-                    android:visibility="gone">
-
-                </ImageView>
+                    android:contentDescription="@string/left_image"
+                    android:visibility="gone"
+                    android:scaleType="centerCrop"
+                    />
             </FrameLayout>
 
         </RelativeLayout>
