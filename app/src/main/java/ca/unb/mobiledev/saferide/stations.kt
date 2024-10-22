@@ -22,8 +22,7 @@ class stations : AppCompatActivity() {
 
         val backToHome : ImageButton = findViewById(R.id.back_to_home_button)
         backToHome.setOnClickListener{
-            val intent = Intent(this@stations, HomePageActivity::class.java)
-            startActivity(intent)
+            finish()
         }
     }
 }
