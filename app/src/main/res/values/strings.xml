@@ -40,4 +40,5 @@
     <string name="curriebutton">CurrieButton</string>
     <string name="stu">STU</string>
     <string name="select_pick_up_station">Select Pick Up Station</string>
+    <string name="driver_view">Driver View</string>
 </resources>

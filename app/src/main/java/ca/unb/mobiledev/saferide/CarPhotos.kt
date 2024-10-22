@@ -1,6 +1,7 @@
 package ca.unb.mobiledev.saferide
 
 import android.app.Activity
+import android.content.ContentValues.TAG
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
@@ -9,6 +10,7 @@ import android.net.Uri
 import android.os.Build
 import android.os.Bundle
 import android.provider.MediaStore
+import android.util.Log
 import android.view.View
 import android.widget.Button
 import android.widget.ImageView
@@ -38,10 +40,6 @@ class CarPhotos : AppCompatActivity() {
     private var leftImagePosted: Boolean = false
     private var backImagePosted: Boolean = false
 
-
-    private val image_capture = 1
-    private val image_pick = 2
-
     private var cameraActivityResultLauncher: ActivityResultLauncher<Intent>? = null
 
     private var currentImageView: ImageView? = null
@@ -59,14 +57,14 @@ class CarPhotos : AppCompatActivity() {
         val nextButton: Button = findViewById(R.id.nextCarButton)
         nextButton.setOnClickListener {
             if(frontImagePosted && rightImagePosted && backImagePosted && leftImagePosted) {
-                Toast.makeText(this, "clicked", Toast.LENGTH_SHORT).show()
                 val intent = Intent(this, PickupStationsDriver::class.java)
                 startActivity(intent)
+            } else {
+                Log.i(TAG, "Enter a Photo for each view")
             }
         }
 
         val backID: Button = findViewById(R.id.backButton)
-        Toast.makeText(this, "clicked", Toast.LENGTH_SHORT).show()
         backID.setOnClickListener {
             finish()
         }

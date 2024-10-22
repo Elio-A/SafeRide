@@ -27,10 +27,8 @@
         <activity
             android:name=".CarPhotos"
             android:exported="false" />
-        <activity
-            android:name=".LoginPage"
-            android:exported="false" />
-        
+        <activity android:name="SafeRideCars"
+            android:exported="false"/>
         <activity
             android:name=".MainActivity"
             android:exported="false"/>

@@ -91,6 +91,16 @@
                 android:textSize="30sp"
                 android:textColorHint="@color/lightgrey"
                 />
+
+            <Button
+                android:id="@+id/DriverButton"
+                android:layout_width="358dp"
+                android:layout_height="89dp"
+                android:layout_alignBottom="@+id/qr_code_button"
+                android:backgroundTint="@color/dimgrey"
+                android:hint="@string/driver_view"
+                android:textSize="30sp"
+                android:textColorHint="@color/lightgrey"/>
         </LinearLayout>
     </ScrollView>
 </RelativeLayout>

@@ -10,6 +10,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import MockData.*
 import android.content.ContentValues.TAG
+import android.content.Intent
 import android.nfc.Tag
 
 class LoginPage : AppCompatActivity() {
@@ -39,9 +40,12 @@ class LoginPage : AppCompatActivity() {
             val username = usernameInput.text.toString()
             val password = passwordInput.text.toString()
 
+            var intent = Intent(this@LoginPage, HomePageActivity::class.java)
+
             val test : Boolean = MockDataMain.isAUser(username)
             if(test){
                 Log.i(TAG, "Logged In Successfully!")
+                startActivity(intent)
             }
             else{
                 Log.i(TAG,"GTFO!")
