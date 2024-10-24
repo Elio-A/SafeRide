@@ -21,4 +21,25 @@
     <string name="qr_code_scanner">QR Code</string>
     <string name="radius">Radius</string>
     <string name="next_pick_up">Next Pick-up</string>
+    <string name="car_photos">Car Photos</string>
+    <string name="plus_Sign">+</string>
+    <string name="front_view">Front View</string>
+    <string name="right_view">Right View</string>
+    <string name="back_text">Back View</string>
+    <string name="left_view">Left View</string>
+    <string name="next">Next</string>
+    <string name="front_image">Front Image</string>
+    <string name="right_image">Right Image</string>
+    <string name="back_image">Back Image</string>
+    <string name="left_image">Left Image</string>
+    <string name="student_union_building">Student Union Building</string>
+    <string name="head_hall">Head Hall</string>
+    <string name="subbutton">SUBButton</string>
+    <string name="headhallimagebutton">HeadHallImageButton</string>
+    <string name="stu_button">STU Button</string>
+    <string name="richard_currie_center">Richard Currie Center</string>
+    <string name="curriebutton">CurrieButton</string>
+    <string name="stu">STU</string>
+    <string name="select_pick_up_station">Select Pick Up Station</string>
+    <string name="driver_view">Driver View</string>
 </resources>

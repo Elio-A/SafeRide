@@ -24,9 +24,11 @@ class HomePageActivity : AppCompatActivity(){
         val radiusButton : Button = findViewById(R.id.radius_button)
         val workingHourButton : Button = findViewById(R.id.working_hours_button)
         val aboutUsButton : Button = findViewById(R.id.about_us_button)
+        val driverViewButton: Button = findViewById(R.id.DriverButton)
 
         stationButton.setOnClickListener{
-            //Go to that activity
+            val intent = Intent(this@HomePageActivity, stations::class.java)
+            startActivity(intent)
         }
 
         radiusButton.setOnClickListener{
@@ -41,6 +43,11 @@ class HomePageActivity : AppCompatActivity(){
 
         aboutUsButton.setOnClickListener{
             val intent = Intent(this@HomePageActivity, Aboutus::class.java)
+            startActivity(intent)
+        }
+
+        driverViewButton.setOnClickListener{
+            val intent = Intent(this@HomePageActivity, SafeRideCars::class.java)
             startActivity(intent)
         }
     }

@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:background="@drawable/home_activity_backgroud_dradient"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CarPhotos">
+
+    <RelativeLayout
+        android:id="@+id/relativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="60sp"
+        android:background="@color/saferideOrange"
+        app:layout_constraintDimensionRatio="w,1:1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="sans-serif-black"
+            android:gravity="center"
+            android:text="@string/car_photos"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/button"
+            app:icon="?attr/homeAsUpIndicator"
+            app:iconSize="30dp"
+            app:iconTint="#000000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/nextCarButton"
+            android:layout_width="50dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="0dp"
+            android:background="@color/transparent"
+            android:enabled="true"
+            android:text="@string/button"
+            app:icon="?attr/homeAsUpIndicator"
+            app:iconSize="30dp"
+            app:iconTint="#000000"
+            android:scaleX="-1"
+            />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="60dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent">
+
+            <TextView
+                android:id="@+id/FrontText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:text="@string/front_view"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <FrameLayout
+                android:id="@+id/FrontPicture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/FrontText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/square_with_dashes"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <Button
+                    android:id="@+id/ImageFront"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:background="@color/transparent"
+                    android:text="@string/plus_Sign"
+                    android:textColor="@color/saferideOrange"
+                    android:textSize="30sp" />
+
+                <ImageView
+                    android:id="@+id/FrontImage"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:contentDescription="@string/front_image"
+                    android:visibility="gone"
+                    android:scaleType="centerCrop"
+                    />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/RightText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/FrontPicture"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:text="@string/right_view"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <FrameLayout
+                android:id="@+id/RightPicture"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_below="@+id/RightText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/square_with_dashes">
+
+                <Button
+                    android:id="@+id/ImageRight"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:background="@color/transparent"
+                    android:text="@string/plus_Sign"
+                    android:textColor="@color/saferideOrange"
+                    android:textSize="30sp">
+
+                </Button>
+
+                <ImageView
+                    android:id="@+id/RightImage"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:contentDescription="@string/right_image"
+                    android:visibility="gone"
+                    android:scaleType="centerCrop"
+                    />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/BackText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/RightPicture"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:text="@string/back_text"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <FrameLayout
+                android:id="@+id/BackPicture"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_below="@+id/BackText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/square_with_dashes">
+
+                <Button
+                    android:id="@+id/ImageBack"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:background="@color/transparent"
+                    android:text="@string/plus_Sign"
+                    android:textColor="@color/saferideOrange"
+                    android:textSize="30sp">
+
+                </Button>
+
+                <ImageView
+                    android:id="@+id/BackImage"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:contentDescription="@string/back_image"
+                    android:visibility="gone"
+                    android:scaleType="centerCrop"
+                    />
+            </FrameLayout>
+
+            <TextView
+                android:id="@+id/LeftText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/BackPicture"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:text="@string/left_view"
+                android:textColor="@color/white"
+                android:textSize="20sp" />
+
+            <FrameLayout
+                android:id="@+id/LeftPicture"
+                android:layout_width="300dp"
+                android:layout_height="300dp"
+                android:layout_below="@+id/LeftText"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/square_with_dashes">
+
+                <Button
+                    android:id="@+id/ImageLeft"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:background="@color/transparent"
+                    android:text="@string/plus_Sign"
+                    android:textColor="@color/saferideOrange"
+                    android:textSize="30sp">
+
+                </Button>
+
+                <ImageView
+                    android:id="@+id/LeftImage"
+                    android:layout_width="300dp"
+                    android:layout_height="300dp"
+                    android:contentDescription="@string/left_image"
+                    android:visibility="gone"
+                    android:scaleType="centerCrop"
+                    />
+            </FrameLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
