@@ -20,5 +20,5 @@
     <string name="button">Button</string>
     <string name="qr_code_scanner">QR Code</string>
     <string name="radius">Radius</string>
-    <string name="next_pick_uo">Next Pick-uo</string>
+    <string name="next_pick_up">Next Pick-up</string>
 </resources>

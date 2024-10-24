@@ -8,6 +8,95 @@
     android:background="@drawable/home_activity_backgroud_dradient"
     tools:context=".Next_Pickup">
 
+
+    <ScrollView
+        android:layout_width="409dp"
+        android:layout_height="match_parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <LinearLayout
+            android:layout_width="400dp"
+            android:layout_height="200dp"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:id="@+id/sub_layout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_marginStart="100dp">
+
+
+                <TextView
+                    android:id="@+id/sub_pickup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="200dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="STUDENT UNION BUILDING\nCurrent Status: "
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/wait_sub"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/sub_pickup"
+                    android:layout_marginStart="30dp"
+                    android:fontFamily="sans-serif-black"
+                    android:text="Wait Time: "
+                    android:textColor="@color/white"
+                    android:textSize="22sp"
+                    android:visibility="gone"/>
+
+
+
+            </RelativeLayout>
+
+
+
+            <TextView
+                android:id="@+id/stu_pickup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-black"
+                android:text="SIR JAMES DUNN HALL (STU)\nCurrent Status: "
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/IUC_pickup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-black"
+                android:text="I.U.C Science Library\nCurrent Status: "
+                android:textColor="@color/white"
+                android:textSize="22sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
+    </ScrollView>
+
+
+
+
+
     <RelativeLayout
         android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
@@ -24,7 +113,7 @@
             android:layout_height="match_parent"
             android:fontFamily="sans-serif-black"
             android:gravity="center"
-            android:text="@string/next_pick_uo"
+            android:text="Live Status"
             android:textAlignment="center"
             android:textColor="@android:color/black"
             android:textSize="20sp"
@@ -47,7 +136,6 @@
             app:layout_constraintTop_toTopOf="parent" />
 
     </RelativeLayout>
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
