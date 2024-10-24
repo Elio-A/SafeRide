@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -9,92 +9,12 @@
     tools:context=".Next_Pickup">
 
 
-    <ScrollView
-        android:layout_width="409dp"
-        android:layout_height="match_parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
-
-
-        <LinearLayout
-            android:layout_width="400dp"
-            android:layout_height="200dp"
-            android:orientation="vertical">
-
-            <RelativeLayout
-                android:id="@+id/sub_layout"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:layout_marginStart="100dp">
-
-
-                <TextView
-                    android:id="@+id/sub_pickup"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_marginStart="30dp"
-                    android:layout_marginTop="200dp"
-                    android:fontFamily="sans-serif-black"
-                    android:text="STUDENT UNION BUILDING\nCurrent Status: "
-                    android:textColor="@color/white"
-                    android:textSize="22sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
-                <TextView
-                    android:id="@+id/wait_sub"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/sub_pickup"
-                    android:layout_marginStart="30dp"
-                    android:fontFamily="sans-serif-black"
-                    android:text="Wait Time: "
-                    android:textColor="@color/white"
-                    android:textSize="22sp"
-                    android:visibility="gone"/>
-
-
-
-            </RelativeLayout>
-
-
-
-            <TextView
-                android:id="@+id/stu_pickup"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="20dp"
-                android:fontFamily="sans-serif-black"
-                android:text="SIR JAMES DUNN HALL (STU)\nCurrent Status: "
-                android:textColor="@color/white"
-                android:textSize="22sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/IUC_pickup"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="30dp"
-                android:layout_marginTop="20dp"
-                android:fontFamily="sans-serif-black"
-                android:text="I.U.C Science Library\nCurrent Status: "
-                android:textColor="@color/white"
-                android:textSize="22sp"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-        </LinearLayout>
-    </ScrollView>
-
-
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="60dp"
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        />
 
 
     <RelativeLayout
@@ -138,4 +58,4 @@
     </RelativeLayout>
 
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

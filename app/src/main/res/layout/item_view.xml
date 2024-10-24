@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="65dp"
+    android:background="@drawable/home_activity_backgroud_dradient">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/headline"
+        android:layout_marginStart="40dp"
+        android:textColor="@color/white"
+        tools:text="Earliest Available"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/station"
+        android:layout_marginStart="40dp"
+        android:layout_below="@id/headline"
+        android:textColor="@color/white"
+        tools:text="Station Name"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/station"
+        android:layout_below="@id/headline"
+        android:id="@+id/time"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/white"
+        tools:text="Wait Time"/>
+
+</RelativeLayout>
