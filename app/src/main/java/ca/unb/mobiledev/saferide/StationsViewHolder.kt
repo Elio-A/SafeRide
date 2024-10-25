@@ -9,8 +9,9 @@ class StationViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
     val stationTextView: TextView = itemView.findViewById(R.id.station)
     val timeTextView: TextView = itemView.findViewById(R.id.time)
 
-    fun bind(stationName: String, waitTime: String) {
+    fun bind(stationName: String, waitTime: Int) {
+        headlineTextView.text = "Next pick-up time:"
         stationTextView.text = stationName
-        timeTextView.text = waitTime
+        timeTextView.text = "$waitTime min"
     }
 }

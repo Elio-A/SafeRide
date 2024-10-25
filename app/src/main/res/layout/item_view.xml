@@ -3,35 +3,36 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginTop="65dp"
-    android:background="@drawable/home_activity_backgroud_dradient">
-
+    android:layout_marginTop="10dp">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/headline"
-        android:layout_marginStart="40dp"
-        android:textColor="@color/white"
-        tools:text="Earliest Available"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:id="@+id/station"
-        android:layout_marginStart="40dp"
-        android:layout_below="@id/headline"
-        android:textColor="@color/white"
-        tools:text="Station Name"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_toEndOf="@id/station"
-        android:layout_below="@id/headline"
-        android:id="@+id/time"
         android:layout_marginStart="20dp"
         android:textColor="@color/white"
-        tools:text="Wait Time"/>
+        tools:text="Station Name"
+        android:textSize="25sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/headline"
+        android:layout_below="@id/station"
+        android:layout_marginStart="20dp"
+        android:textColor="@color/white"
+        tools:text="Earliest Available"
+        android:textSize="22sp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toEndOf="@id/headline"
+        android:layout_below="@id/station"
+        android:id="@+id/time"
+        android:layout_marginStart="10dp"
+        android:textColor="@color/white"
+        tools:text="Wait Time"
+        android:textSize="22sp"/>
 
 </RelativeLayout>
