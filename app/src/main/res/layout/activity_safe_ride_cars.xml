@@ -78,8 +78,8 @@
                     android:layout_width="350dp"
                     android:layout_height="350dp"
                     android:contentDescription="Image of third saferide car"
-                    android:src="@drawable/dodge_van"
-                    android:scaleType="fitXY"/>
+                    android:scaleType="fitXY"
+                    android:src="@drawable/dodge_van" />
 
                 <TextView
                     android:layout_width="match_parent"
