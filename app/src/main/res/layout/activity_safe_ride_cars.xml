@@ -27,8 +27,8 @@
                     android:layout_width="350dp"
                     android:layout_height="350dp"
                     android:contentDescription="Image of second saferide car"
-                    android:src="@drawable/sub_banner"
-                    android:scaleType="fitCenter"/>
+                    android:src="@drawable/subie_suv"
+                    android:scaleType="fitXY"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -53,8 +53,8 @@
                     android:layout_width="350dp"
                     android:layout_height="350dp"
                     android:contentDescription="Image of second saferide car"
-                    android:scaleType="fitCenter"
-                    android:src="@drawable/sub_banner"/>
+                    android:scaleType="fitXY"
+                    android:src="@drawable/subie_suv"/>
 
                 <TextView
                     android:layout_width="match_parent"
@@ -78,13 +78,13 @@
                     android:layout_width="350dp"
                     android:layout_height="350dp"
                     android:contentDescription="Image of third saferide car"
-                    android:src="@drawable/sub_banner"
-                    android:scaleType="fitCenter"/>
+                    android:src="@drawable/dodge_van"
+                    android:scaleType="fitXY"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="License Plate #3"
+                    android:hint="License Plate: JOM 449"
                     android:textColorHint="@color/white"
                     android:textSize="22sp"
                     android:textAlignment="center"
@@ -104,8 +104,8 @@
                     android:layout_width="350dp"
                     android:layout_height="350dp"
                     android:contentDescription="Image of fourth saferide car"
-                    android:src="@drawable/sub_banner"
-                    android:scaleType="fitCenter"/>
+                    android:src="@drawable/dodge_van"
+                    android:scaleType="fitXY"/>
 
                 <TextView
                     android:layout_width="match_parent"
