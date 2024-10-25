@@ -19,6 +19,9 @@
         android:theme="@style/Theme.SafeRide"
         tools:targetApi="31">
         <activity
+            android:name=".DriverHomePage"
+            android:exported="false" />
+        <activity
             android:name=".DriverHome"
             android:exported="false" />
         <activity
@@ -27,14 +30,15 @@
         <activity
             android:name=".CarPhotos"
             android:exported="false" />
-        <activity android:name="SafeRideCars"
-            android:exported="false"/>
+        <activity
+            android:name=".SafeRideCars"
+            android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".HomePageActivity"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".stations"
             android:exported="false" />

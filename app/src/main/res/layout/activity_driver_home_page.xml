@@ -4,9 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     android:background="@drawable/home_activity_backgroud_dradient"
-    tools:context=".HomePageActivity">
+    tools:context=".DriverHomePage">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -20,10 +20,9 @@
             >
 
             <ImageView
-                android:id="@+id/saferide_image1"
+                android:id="@+id/qr_code_image"
                 android:layout_width="match_parent"
-                android:layout_height="284dp"
-                android:src="@drawable/saferide_homepage" />
+                android:layout_height="284dp" />
 
             <Button
                 android:id="@+id/pickup_stations_button"
@@ -109,16 +108,6 @@
                 android:layout_alignBottom="@+id/qr_code_button"
                 android:backgroundTint="@color/dimgrey"
                 android:hint="Next Pick-Up"
-                android:textSize="30sp"
-                android:textColorHint="@color/lightgrey"/>
-
-            <Button
-                android:id="@+id/driver_home_page"
-                android:layout_width="358dp"
-                android:layout_height="89dp"
-                android:layout_alignBottom="@+id/qr_code_button"
-                android:backgroundTint="@color/dimgrey"
-                android:hint="Driver Home Page"
                 android:textSize="30sp"
                 android:textColorHint="@color/lightgrey"/>
         </LinearLayout>
