@@ -19,6 +19,7 @@
         android:elevation="1dp"
         android:background="@drawable/account_icon_background"
         android:src="@drawable/account_logo"
+        android:scaleType="fitCenter"
         />
 
     <RelativeLayout
@@ -26,14 +27,16 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:paddingTop="65dp"
-        android:paddingBottom="40dp"
+        android:padding="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:background="@drawable/login_space_background"
+        android:orientation="vertical"
         >
 
         <EditText
             android:id="@+id/login_username"
-            android:layout_width="match_parent"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:hint="Student Number"
             android:inputType="number"
@@ -43,6 +46,7 @@
             android:padding="15dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
+            android:gravity="center"
             />
 
         <EditText
