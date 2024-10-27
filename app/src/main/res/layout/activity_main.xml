@@ -40,6 +40,26 @@
             android:background="@drawable/rectangle_button_background"
             android:layout_marginTop="200dp"/>
 
+        <Button
+            android:id="@+id/saferide_cars_activity"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="300dp"
+            android:hint="Go To saferide cars Page"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:background="@drawable/rectangle_button_background"/>
+
+        <Button
+            android:id="@+id/next_pickup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Go To Pickup"
+            android:textSize="30sp"
+            android:textColor="@color/white"
+            android:background="@drawable/rectangle_button_background"
+            android:layout_marginTop="450dp"/>
+
 
     </RelativeLayout>
 

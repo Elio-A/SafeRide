@@ -20,6 +20,7 @@
     <string name="button">Button</string>
     <string name="qr_code_scanner">QR Code</string>
     <string name="radius">Radius</string>
+    <string name="next_pick_up">Next Pick-up</string>
     <string name="car_photos">Car Photos</string>
     <string name="plus_Sign">+</string>
     <string name="front_view">Front View</string>
@@ -40,4 +41,5 @@
     <string name="curriebutton">CurrieButton</string>
     <string name="stu">STU</string>
     <string name="select_pick_up_station">Select Pick Up Station</string>
+    <string name="driver_view">Driver View</string>
 </resources>
