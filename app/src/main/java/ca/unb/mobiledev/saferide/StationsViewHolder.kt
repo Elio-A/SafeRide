@@ -4,6 +4,7 @@ import android.media.Image
 import android.view.View
 import android.widget.ImageView
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 
 class StationViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
@@ -20,13 +21,21 @@ class StationViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         stationTextView.text = stationName
         headlineTextView.text = headline
         statusTextView.text = status
+
+        val colorResId = when (status) {
+            "Available" -> R.color.green
+            "On Delivery" -> R.color.red
+            else -> R.color.white
+        }
+        statusTextView.setTextColor(ContextCompat.getColor(itemView.context, colorResId))
+
         if(status == "Available"){
             headline2TextView.text = "Seats Available:"
             answerTextView.text = seats.toString()
         }
         else{
             headline2TextView.text = "Wait time:"
-            answerTextView.text = waitTime.toString()
+            answerTextView.text = "${waitTime} min"
         }
         licenseTextView.text = license
     }
