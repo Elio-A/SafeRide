@@ -48,10 +48,10 @@ class HomePageActivity : AppCompatActivity(){
             startActivity(intent)
         }
 
-        driverViewButton.setOnClickListener{
-            val intent = Intent(this@HomePageActivity, SafeRideCars::class.java)
-            startActivity(intent)
-        }
+//        driverViewButton.setOnClickListener{
+//            val intent = Intent(this@HomePageActivity, SafeRideCars::class.java)
+//            startActivity(intent)
+//        }
 
         //Here is your button!!!!!!
 //        nextPickupButton.setOnClickListener {
