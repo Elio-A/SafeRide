@@ -1,5 +1,6 @@
 package ca.unb.mobiledev.saferide
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -24,9 +25,12 @@ class HomePageActivity : AppCompatActivity(){
         val radiusButton : Button = findViewById(R.id.radius_button)
         val workingHourButton : Button = findViewById(R.id.working_hours_button)
         val aboutUsButton : Button = findViewById(R.id.about_us_button)
+        val driverViewButton: Button = findViewById(R.id.driver_button)
+        val nextPickupButton: Button = findViewById(R.id.next_pickup_button)
 
         stationButton.setOnClickListener{
-            //Go to that activity
+            val intent = Intent(this@HomePageActivity, stations::class.java)
+            startActivity(intent)
         }
 
         radiusButton.setOnClickListener{
@@ -35,12 +39,36 @@ class HomePageActivity : AppCompatActivity(){
         }
 
         workingHourButton.setOnClickListener{
-
+            val intent = Intent(this@HomePageActivity, WorkingHours::class.java)
+            startActivity(intent)
         }
 
         aboutUsButton.setOnClickListener{
             val intent = Intent(this@HomePageActivity, Aboutus::class.java)
             startActivity(intent)
         }
+
+        driverViewButton.setOnClickListener{
+            val intent = Intent(this@HomePageActivity, SafeRideCars::class.java)
+            startActivity(intent)
+        }
+
+        //Here is your button!!!!!!
+//        nextPickupButton.setOnClickListener {
+//            val intent = Intent(this@HomePageActivity, NextPickupActivity::class.java)
+//            startActivity(intent)
+//        }
+    }
+
+    override fun onBackPressed(){
+        AlertDialog.Builder(this)
+            .setTitle("Confirm Exit")
+            .setMessage("Are you sure you want to exit the app?")
+            .setPositiveButton("Yes") { _, _ ->
+                super.onBackPressed()
+                finishAffinity()
+            }
+            .setNegativeButton("No", null)
+            .show()
     }
 }//End HomePageActivity

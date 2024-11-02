@@ -8,93 +8,109 @@
     android:background="@drawable/home_activity_backgroud_dradient"
     tools:context=".HomePageActivity">
 
-    <RelativeLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        >
+        android:layout_height="wrap_content">
 
-        <ImageView
-            android:id="@+id/saferide_image1"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:scaleType="fitStart"
-            android:src="@drawable/saferide_homepage" />
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            >
 
-        <Button
-            android:id="@+id/pickup_stations_button"
-            android:layout_width="200dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="300dp"
-            android:layout_marginStart="3dp"
-            android:backgroundTint="@color/dimgrey"
-            android:hint="@string/pick_up_stations"
-            android:textSize="30sp"
-            android:textColorHint="@color/saferide_orange"
-            />
+            <ImageView
+                android:id="@+id/saferide_image1"
+                android:layout_width="match_parent"
+                android:layout_height="284dp"
+                android:src="@drawable/saferide_homepage" />
 
-        <Button
-            android:id="@+id/radius_button"
-            android:layout_width="200dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="300dp"
-            android:layout_marginStart="209dp"
-            android:backgroundTint="@color/dimgrey"
-            android:hint="@string/radius_home"
-            android:textSize="30sp"
-            android:textColorHint="@color/saferide_orange"
-            />
+            <Button
+                android:id="@+id/pickup_stations_button"
+                android:layout_width="358dp"
+                android:layout_height="89dp"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/dimgrey"
+                android:hint="@string/pick_up_stations"
+                android:textColorHint="@color/saferide_orange"
+                android:textSize="30sp" />
 
-        <Button
-            android:id="@+id/working_hours_button"
-            android:layout_width="200dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="425dp"
-            android:layout_marginStart="3dp"
-            android:backgroundTint="@color/dimgrey"
-            android:hint="@string/working_hours"
-            android:textSize="30sp"
-            android:textColorHint="@color/purple"
-            />
+            <Button
+                android:id="@+id/radius_button"
+                android:layout_width="358dp"
+                android:layout_height="89dp"
+                android:backgroundTint="@color/dimgrey"
+                android:hint="@string/radius_home"
+                android:textColorHint="@color/saferide_orange"
+                android:textSize="30sp" />
 
-        <Button
-            android:id="@+id/about_us_button"
-            android:layout_width="200dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="425dp"
-            android:layout_marginStart="209dp"
-            android:backgroundTint="@color/dimgrey"
-            android:hint="@string/about_us"
-            android:textSize="30sp"
-            android:textColorHint="@color/purple"
-            />
+            <Button
+                android:id="@+id/working_hours_button"
+                android:layout_width="358dp"
+                android:layout_height="89dp"
+                android:layout_alignBottom="@+id/radius_button"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="@color/dimgrey"
+                android:hint="@string/working_hours"
+                android:textSize="30sp"
+                android:textColorHint="@color/purple"
+                />
 
-        <Button
-            android:id="@+id/news_button"
-            android:layout_width="200dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="550dp"
-            android:layout_marginStart="209dp"
-            android:backgroundTint="@color/dimgrey"
-            android:hint="@string/news"
-            android:textSize="30sp"
-            android:textColorHint="@color/white"
-            />
+            <Button
+                android:id="@+id/about_us_button"
+                android:layout_width="358dp"
+                android:layout_height="89dp"
+                android:layout_alignBottom="@+id/working_hours_button"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="@color/dimgrey"
+                android:hint="@string/about_us"
+                android:textSize="30sp"
+                android:textColorHint="@color/purple"
+                />
 
-        <Button
-            android:id="@+id/qr_code_button"
-            android:layout_width="200dp"
-            android:layout_height="100dp"
-            android:layout_marginTop="550dp"
-            android:layout_marginStart="3dp"
-            android:backgroundTint="@color/dimgrey"
-            android:hint="@string/qr_code"
-            android:textSize="30sp"
-            android:textColorHint="@color/lightgrey"
-            />
+            <Button
+                android:id="@+id/news_button"
+                android:layout_width="358dp"
+                android:layout_height="89dp"
+                android:layout_alignBottom="@+id/about_us_button"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="@color/dimgrey"
+                android:hint="@string/news"
+                android:textSize="30sp"
+                android:textColorHint="@color/white"
+                />
 
+            <Button
+                android:id="@+id/qr_code_button"
+                android:layout_width="358dp"
+                android:layout_height="89dp"
+                android:layout_alignBottom="@+id/news_button"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="@color/dimgrey"
+                android:hint="@string/qr_code"
+                android:textSize="30sp"
+                android:textColorHint="@color/lightgrey"
+                />
 
+            <Button
+                android:id="@+id/driver_button"
+                android:layout_width="358dp"
+                android:layout_height="89dp"
+                android:layout_alignBottom="@+id/qr_code_button"
+                android:backgroundTint="@color/dimgrey"
+                android:hint="@string/driver_view"
+                android:textSize="30sp"
+                android:textColorHint="@color/lightgrey"/>
 
-    </RelativeLayout>
-
+            <Button
+                android:id="@+id/next_pickup_button"
+                android:layout_width="358dp"
+                android:layout_height="89dp"
+                android:layout_alignBottom="@+id/qr_code_button"
+                android:backgroundTint="@color/dimgrey"
+                android:hint="Next Pick-Up"
+                android:textSize="30sp"
+                android:textColorHint="@color/lightgrey"/>
+        </LinearLayout>
+    </ScrollView>
 </RelativeLayout>
