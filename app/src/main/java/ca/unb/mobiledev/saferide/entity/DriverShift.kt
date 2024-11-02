@@ -25,12 +25,13 @@ import androidx.room.PrimaryKey
     ]
 )
 class DriverShift {
-    @PrimaryKey(autoGenerate = true) val id = 0
-    val driver_id: Int? = null
-    val station: String? = null
-    val vehicle: String? = null
-    val frontView: ByteArray? = null
-    val backView: ByteArray? = null
-    val leftView: ByteArray? = null
-    val rightView: ByteArray? = null
+    @PrimaryKey(autoGenerate = true)
+    val id = 0
+    var driver_id: Int? = null
+    var station: Stations? = null
+    var vehicle: Vehicle? = null
+    var frontView: ByteArray? = null
+    var backView: ByteArray? = null
+    var leftView: ByteArray? = null
+    var rightView: ByteArray? = null
 }

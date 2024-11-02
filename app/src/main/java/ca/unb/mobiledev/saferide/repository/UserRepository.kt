@@ -12,6 +12,8 @@ class UserRepository (application: Application) {
 
     val allUsers: LiveData<List<User>> = userDao.listAllUsers()
 
+    val allDrivers: LiveData<List<User>> = userDao.getAllDrivers()
+
     fun insertUser(firstName: String?, lastName: String?, email: String?, driver: Boolean){
         val newUser = User()
         newUser.firstName = firstName

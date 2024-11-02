@@ -15,5 +15,7 @@ interface User_DAO {
     @Query("SELECT * from user")
     fun listAllUsers(): LiveData<List<User>>
 
+    @Query("SELECT * from user where driver=1")
+    fun getAllDrivers(): LiveData<List<User>>
 
 }

@@ -16,9 +16,10 @@ class Dropofflocation {
 
     @PrimaryKey(autoGenerate = true)
     val id: Int? = null
-    val user: User? = null
-    val station: String? = null
+    var user: User? = null
+    var station: Stations? = null
     val status: Status = Status.Waiting
+    var location: String? = null
     @ColumnInfo(name = "create_at", defaultValue = "CURRENT_TIMESTAMP")
     val createdAt: Long = 0
 }
