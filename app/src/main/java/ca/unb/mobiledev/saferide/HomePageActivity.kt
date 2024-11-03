@@ -1,5 +1,6 @@
 package ca.unb.mobiledev.saferide
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
@@ -24,7 +25,8 @@ class HomePageActivity : AppCompatActivity(){
         val radiusButton : Button = findViewById(R.id.radius_button)
         val workingHourButton : Button = findViewById(R.id.working_hours_button)
         val aboutUsButton : Button = findViewById(R.id.about_us_button)
-        val driverViewButton: Button = findViewById(R.id.DriverButton)
+        val driverViewButton: Button = findViewById(R.id.driver_button)
+        val nextPickupButton: Button = findViewById(R.id.next_pickup_button)
 
         stationButton.setOnClickListener{
             val intent = Intent(this@HomePageActivity, stations::class.java)
@@ -50,5 +52,22 @@ class HomePageActivity : AppCompatActivity(){
             val intent = Intent(this@HomePageActivity, SafeRideCars::class.java)
             startActivity(intent)
         }
+
+        nextPickupButton.setOnClickListener {
+            val intent = Intent(this@HomePageActivity, Next_Pickup::class.java)
+            startActivity(intent)
+        }
+    }
+
+    override fun onBackPressed(){
+        AlertDialog.Builder(this)
+            .setTitle("Confirm Exit")
+            .setMessage("Are you sure you want to exit the app?")
+            .setPositiveButton("Yes") { _, _ ->
+                super.onBackPressed()
+                finishAffinity()
+            }
+            .setNegativeButton("No", null)
+            .show()
     }
 }//End HomePageActivity
