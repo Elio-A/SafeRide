@@ -31,7 +31,7 @@ class NextLocations : AppCompatActivity() {
         var seat = 0
         var station = 0
 
-        if(extras != null) {
+        if (extras != null) {
             seat = extras.getInt("SEAT")
             station = extras.getInt("STATION")
         }
@@ -39,7 +39,4 @@ class NextLocations : AppCompatActivity() {
         //val nextStops: LiveData<List<Dropofflocation>> = nextStops.getNextPassengers(seat, station)
 
     }
-
-
-
 }
