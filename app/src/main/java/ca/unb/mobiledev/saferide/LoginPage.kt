@@ -12,6 +12,8 @@ import MockData.*
 import android.content.ContentValues.TAG
 import android.content.Intent
 import android.nfc.Tag
+import android.widget.Toast
+import kotlin.math.sign
 
 class LoginPage : AppCompatActivity() {
 
@@ -45,12 +47,21 @@ class LoginPage : AppCompatActivity() {
             val test : Boolean = MockDataMain.isAUser(username)
             if(test){
                 Log.i(TAG, "Logged In Successfully!")
+                Toast.makeText(this, "Logged In Successfully!", Toast.LENGTH_SHORT).show()
                 startActivity(intent)
+                finish()
             }
             else{
                 Log.i(TAG,"GTFO!")
+                Toast.makeText(this, "Username or Password incorrect, please try again!", Toast.LENGTH_SHORT).show()
             }
             Log.i("Test Credentials", "Username: $username and Password: $password")
         }
+
+        signupButton.setOnClickListener {
+            intent = Intent(this@LoginPage, sign_up_page::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
-}
+}//End LoginPage
