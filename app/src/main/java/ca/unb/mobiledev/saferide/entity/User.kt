@@ -1,15 +1,15 @@
 package ca.unb.mobiledev.saferide.entity
 
+import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
 
 @Entity(tableName = "user")
-class User {
+data class User (
 
-    @PrimaryKey
-    var user_id = 0
-    var firstName: String? = null
-    var lastName: String? = null
-    var email: String? = null
-    var driver: Boolean = false
-}
+    @PrimaryKey @ColumnInfo (name = "user_id") val userId: Int,
+    @ColumnInfo (name = "firstName") val firstName: String?,
+    @ColumnInfo (name = "lastName") val lastName: String?,
+    @ColumnInfo (name = "email") val email: String?,
+    @ColumnInfo (name = "driver") val driver: Boolean,
+)

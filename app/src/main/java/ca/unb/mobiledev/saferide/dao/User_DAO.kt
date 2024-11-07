@@ -10,7 +10,7 @@ interface User_DAO {
     fun insert(user: User)
 
     @Query("SELECT * from user where user_id = :user_id")
-    fun getUser(user_id: Int): List<User>
+    infix fun getUserById(user_id: Int): LiveData<User>
 
     @Query("SELECT * from user")
     fun listAllUsers(): LiveData<List<User>>
