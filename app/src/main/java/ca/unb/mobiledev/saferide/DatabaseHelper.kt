@@ -22,7 +22,7 @@ SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION)
         val createTableQuery = """
             create table $TABLE_USERS (
                 $COLUMN_ID integer primary key autoincrement,
-                $COLUMN_USERNAME TEXT,
+                $COLUMN_USERNAME TEXT UNIQUE,
                 $COLUMN_PASSWORD TEXT
             )
             """.trimIndent()
@@ -36,20 +36,20 @@ SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION)
 
     fun addUser(username: String, password: String): Long{
         val db = this.writableDatabase
-        val values = ContentValues().apply{
-            put(COLUMN_USERNAME, username)
-            put(COLUMN_PASSWORD, password)
-        }
-        return db.insert(TABLE_USERS, null, values)
+        val values = ContentValues()
+        values.put(COLUMN_USERNAME, username)
+        values.put(COLUMN_PASSWORD, password)
+        val result = db.insert(TABLE_USERS, null, values)
+        db.close()
+        return result
     }
 
     fun checkUser(username: String, password: String): Boolean{
-        val db = this.writableDatabase
-        val selection = "$COLUMN_USERNAME = ? AND $COLUMN_PASSWORD = ?"
-        val selectionArgs = arrayOf(username, password)
-        val cursor = db.query(TABLE_USERS, null, selection, selectionArgs, null, null, null)
-        val userExists = cursor.count > 0
+        val db = this.readableDatabase
+        val query = "select * from $TABLE_USERS where $COLUMN_USERNAME = ? and $COLUMN_PASSWORD = ?"
+        val cursor = db.rawQuery(query, arrayOf(username, password))
+        val result = cursor.count > 0
         cursor.close()
-        return userExists
+        return result
     }
 }

@@ -16,6 +16,7 @@ class sign_up_page : AppCompatActivity() {
     private lateinit var passwordEditText : EditText
     private lateinit var confirmPasswordEditText : EditText
     private lateinit var signupButton : Button
+    private lateinit var dbHelper: DatabaseHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +32,7 @@ class sign_up_page : AppCompatActivity() {
         passwordEditText = findViewById(R.id.signup_password)
         confirmPasswordEditText = findViewById(R.id.confirm_password)
         signupButton = findViewById(R.id.signup_button)
+        dbHelper = DatabaseHelper(this)
 
         signupButton.setOnClickListener {
             intent = Intent(this@sign_up_page, LoginPage::class.java)
@@ -39,17 +41,23 @@ class sign_up_page : AppCompatActivity() {
     }
 
     private fun confirmCompitentInput(intent : Intent){
-        val username : String = usernameEditText.getText().toString()
-        val password : String = passwordEditText.getText().toString()
-        val confirmPassword : String = confirmPasswordEditText.getText().toString()
+        val username : String = usernameEditText.text.toString()
+        val password : String = passwordEditText.text.toString()
+        val confirmPassword : String = confirmPasswordEditText.text.toString()
 
         if(password.isEmpty() || confirmPassword.isEmpty() || username.isEmpty()){
             Toast.makeText(this, "Please fill in the empty field(s)!", Toast.LENGTH_SHORT).show()
         }
-        else if(password.equals(confirmPassword)){
-            Toast.makeText(this, "User Created Successfully!", Toast.LENGTH_SHORT).show()
-            startActivity(intent)
-            finish()
+        else if(password == confirmPassword){
+            val result = dbHelper.addUser(username, password)
+            if(result != -1L) {
+                Toast.makeText(this, "User Created Successfully!", Toast.LENGTH_SHORT).show()
+                startActivity(intent)
+                finish()
+            }
+            else{
+                Toast.makeText(this, "Failed to create user.  Username may already exist.", Toast.LENGTH_SHORT).show()
+            }
         }
         else{
             Toast.makeText(this, "Please ensure the passwords you entered match each other!", Toast.LENGTH_SHORT).show()
