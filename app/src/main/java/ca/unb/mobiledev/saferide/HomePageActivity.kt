@@ -2,14 +2,27 @@ package ca.unb.mobiledev.saferide
 
 import android.app.AlertDialog
 import android.content.Intent
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.widget.Button
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.zxing.integration.android.IntentIntegrator
+import com.google.zxing.integration.android.IntentResult
+import android.Manifest
+import android.net.Uri
+import android.util.Patterns
 
 class HomePageActivity : AppCompatActivity(){
+
+    companion object{
+        private const val CAMERA_PERMISSION_REQUEST_CODE = 100
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +38,7 @@ class HomePageActivity : AppCompatActivity(){
         val radiusButton : Button = findViewById(R.id.radius_button)
         val workingHourButton : Button = findViewById(R.id.working_hours_button)
         val aboutUsButton : Button = findViewById(R.id.about_us_button)
+        val qrCodeScanner : Button = findViewById(R.id.qr_code_button)
         val driverViewButton: Button = findViewById(R.id.driver_button)
         val nextPickupButton: Button = findViewById(R.id.next_pickup_button)
 
@@ -48,6 +62,10 @@ class HomePageActivity : AppCompatActivity(){
             startActivity(intent)
         }
 
+        qrCodeScanner.setOnClickListener{
+            requestCameraPermission()
+        }
+
         driverViewButton.setOnClickListener{
             val intent = Intent(this@HomePageActivity, SafeRideCars::class.java)
             startActivity(intent)
@@ -58,6 +76,64 @@ class HomePageActivity : AppCompatActivity(){
 //            val intent = Intent(this@HomePageActivity, NextPickupActivity::class.java)
 //            startActivity(intent)
 //        }
+    }
+
+    private fun requestCameraPermission(){
+        if(ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) != PackageManager.PERMISSION_GRANTED){
+            ActivityCompat.requestPermissions(this, arrayOf(Manifest.permission.CAMERA), CAMERA_PERMISSION_REQUEST_CODE)
+        }
+        else{
+            initiateQRScanner()
+        }
+    }
+
+    private fun initiateQRScanner(){
+        val integrator = IntentIntegrator(this).apply{
+            setDesiredBarcodeFormats(IntentIntegrator.QR_CODE)
+            setPrompt("Scan a QR Code")
+            setCameraId(0)
+            setBeepEnabled(true)
+            setBarcodeImageEnabled(true)
+        }
+        integrator.initiateScan()
+    }
+
+    override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
+        val result: IntentResult?= IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
+        if(result != null){
+            if(result.contents == null){
+                Toast.makeText(this, "Scan Cancelled!", Toast.LENGTH_SHORT).show()
+            }
+            else{
+                Toast.makeText(this, "Scanned Successfully!", Toast.LENGTH_SHORT).show()
+                handleScannedContent(result.contents)
+            }
+        }
+        else{
+            super.onActivityResult(requestCode, resultCode, data)
+        }
+    }
+
+    private fun handleScannedContent(scannedContent: String) {
+        if(Patterns.WEB_URL.matcher(scannedContent).matches()){
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(scannedContent))
+            startActivity(intent)
+        }
+        else{
+            Toast.makeText(this, "I do not know what this is yet, gotta deal with it!", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<out String>, grantResults: IntArray){
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if(requestCode == CAMERA_PERMISSION_REQUEST_CODE){
+            if(grantResults.isNotEmpty() && grantResults[0] == PackageManager.PERMISSION_GRANTED){
+                initiateQRScanner()
+            }
+            else{
+                Toast.makeText(this, "Camera permission is required to scan QR codes!", Toast.LENGTH_LONG).show()
+            }
+        }
     }
 
     override fun onBackPressed(){
