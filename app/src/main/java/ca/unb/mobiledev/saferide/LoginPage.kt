@@ -8,19 +8,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import MockData.*
-import android.content.ContentValues.TAG
 import android.content.Intent
-import android.nfc.Tag
-import android.widget.ListView
 import android.widget.Toast
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.ViewModelProvider
-import ca.unb.mobiledev.saferide.entity.User
-import ca.unb.mobiledev.saferide.viewmodels.UserViewModel
-import java.util.concurrent.Future
-import android.widget.Toast
-import kotlin.math.sign
+import ca.unb.mobiledev.saferide.DatabaseHelpers.UserDatabaseHelper
 
 class LoginPage : AppCompatActivity() {
 
@@ -28,7 +18,7 @@ class LoginPage : AppCompatActivity() {
     lateinit var passwordInput : EditText
     lateinit var loginButton : Button
     lateinit var signupButton : Button
-    private lateinit var dbHelper: DatabaseHelper
+    private lateinit var dbHelper: UserDatabaseHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -46,7 +36,7 @@ class LoginPage : AppCompatActivity() {
         loginButton = findViewById(R.id.login_button)
         signupButton = findViewById(R.id.signup_button)
 
-        dbHelper = DatabaseHelper(this)
+        dbHelper = UserDatabaseHelper(this)
 
         loginButton.setOnClickListener {
             val username = usernameInput.text.toString()

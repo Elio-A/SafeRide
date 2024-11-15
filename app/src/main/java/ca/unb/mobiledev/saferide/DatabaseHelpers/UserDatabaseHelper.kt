@@ -1,11 +1,11 @@
-package ca.unb.mobiledev.saferide
+package ca.unb.mobiledev.saferide.DatabaseHelpers
 
 import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
 
-class DatabaseHelper(context: Context):
+class UserDatabaseHelper(context: Context):
 SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION)
 {
 

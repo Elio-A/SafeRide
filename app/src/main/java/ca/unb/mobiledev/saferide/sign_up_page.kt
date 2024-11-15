@@ -9,6 +9,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import ca.unb.mobiledev.saferide.DatabaseHelpers.UserDatabaseHelper
 
 class sign_up_page : AppCompatActivity() {
 
@@ -16,7 +17,7 @@ class sign_up_page : AppCompatActivity() {
     private lateinit var passwordEditText : EditText
     private lateinit var confirmPasswordEditText : EditText
     private lateinit var signupButton : Button
-    private lateinit var dbHelper: DatabaseHelper
+    private lateinit var dbHelper: UserDatabaseHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -32,7 +33,7 @@ class sign_up_page : AppCompatActivity() {
         passwordEditText = findViewById(R.id.signup_password)
         confirmPasswordEditText = findViewById(R.id.confirm_password)
         signupButton = findViewById(R.id.signup_button)
-        dbHelper = DatabaseHelper(this)
+        dbHelper = UserDatabaseHelper(this)
 
         signupButton.setOnClickListener {
             intent = Intent(this@sign_up_page, LoginPage::class.java)

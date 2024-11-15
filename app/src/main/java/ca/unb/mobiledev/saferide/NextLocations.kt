@@ -5,15 +5,8 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import androidx.lifecycle.LiveData
-import ca.unb.mobiledev.saferide.entity.Dropofflocation
-import ca.unb.mobiledev.saferide.entity.Stations
-import ca.unb.mobiledev.saferide.viewmodels.DropOffLocationViewModel
-import ca.unb.mobiledev.saferide.viewmodels.StationsViewModel
 
 class NextLocations : AppCompatActivity() {
-
-    private lateinit var nextStops: DropOffLocationViewModel
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,8 +28,5 @@ class NextLocations : AppCompatActivity() {
             seat = extras.getInt("SEAT")
             station = extras.getInt("STATION")
         }
-
-        //val nextStops: LiveData<List<Dropofflocation>> = nextStops.getNextPassengers(seat, station)
-
     }
 }

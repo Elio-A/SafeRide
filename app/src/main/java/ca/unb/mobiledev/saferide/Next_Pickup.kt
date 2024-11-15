@@ -19,11 +19,11 @@ import ca.unb.mobiledev.saferide.data.StationAdapter
 
 class Next_Pickup : AppCompatActivity() {
 
-    private val subTime = 0;
-    private val stuTime = 0;
-    private val iucTime = 1;
-    private val subieSeat = 4;
-    private val vanSeat = 4;
+    private val subTime = 0
+    private val stuTime = 0
+    private val iucTime = 1
+    private val subieSeat = 4
+    private val vanSeat = 4
 
     @SuppressLint("SetTextI18n")
     override fun onCreate(savedInstanceState: Bundle?) {
