@@ -12,10 +12,12 @@ import android.content.ContentValues.TAG
 import android.content.Intent
 import android.nfc.Tag
 import android.widget.ListView
+import android.widget.Toast
+import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModelProvider
 import ca.unb.mobiledev.saferide.entity.User
 import ca.unb.mobiledev.saferide.viewmodels.UserViewModel
-import ca.unb.mobiledev.saferide.viewmodels.UserViewModelFactory
+import java.util.concurrent.Future
 
 class LoginPage : AppCompatActivity() {
     private lateinit var userViewModel: UserViewModel
@@ -36,9 +38,6 @@ class LoginPage : AppCompatActivity() {
             insets
         }
 
-        val factory = UserViewModelFactory(application)
-        userViewModel = ViewModelProvider(this, factory).get(UserViewModel::class.java)
-
         usernameInput = findViewById(R.id.login_username)
         passwordInput = findViewById(R.id.login_password)
 
@@ -50,27 +49,36 @@ class LoginPage : AppCompatActivity() {
             val firstName = "Albertus"
             val lastName = "Koesoema"
             val email = "albertus.university@unb.ca"
+            val password = "albert"
             val driver = false
-
-            userViewModel.insert(User(userId = studentId, firstName = firstName, lastName = lastName, email = email, driver = driver ))
+            addUser(studentId, firstName, lastName, email, password, driver)
+            Toast.makeText(this, "User added", Toast.LENGTH_SHORT).show()
+        //userViewModel.insert(User(userId = studentId, firstName = firstName, lastName = lastName, email = email, driver = driver ))
         }
 
         loginButton.setOnClickListener {
             val studentId = usernameInput.text.toString().trim()
-            val password = passwordInput.text.toString()
-
-            var intent = Intent(this@LoginPage, HomePageActivity::class.java)
-
+            val password = passwordInput.text.toString().trim()
+            searchForUser(studentId.toInt(), password)
             //call function from userRepository
-            userViewModel.getUserById(studentId.toInt()).observe(this){ users ->
-                if(users != null){
-                    Log.i(TAG, "Logged In Successfully!")
-                    startActivity(intent)
-                }
-                else{
-                    Log.i(TAG,"GTFO!")
-                }
-            }
+
+        }
+        userViewModel = ViewModelProvider(this)[UserViewModel::class.java]
+    }
+
+    private fun addUser(studentId: Int, firstName: String, lastName: String, email: String, password: String, driver: Boolean){
+        userViewModel.insert(studentId, firstName, lastName, email, password, driver)
+    }
+
+    private fun searchForUser(studentId: Int, password: String){
+        val user: Future<List<User>> = userViewModel.getUserById(studentId, password)
+        if(user != null){
+            Log.i(TAG, "Logged In Successfully!")
+            var intent = Intent(this@LoginPage, HomePageActivity::class.java)
+            startActivity(intent)
+        }
+        else{
+            Log.i(TAG,"GTFO!")
         }
     }
 }

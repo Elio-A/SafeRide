@@ -3,8 +3,8 @@ package ca.unb.mobiledev.saferide.repository
 import android.app.Application
 import androidx.lifecycle.LiveData
 import ca.unb.mobiledev.saferide.dao.Drop_off_location_DAO
-import ca.unb.mobiledev.saferide.db.database
-import ca.unb.mobiledev.saferide.db.database.Companion.getDatabase
+import ca.unb.mobiledev.saferide.db.AppDatabase
+import ca.unb.mobiledev.saferide.db.AppDatabase.Companion.getDatabase
 import ca.unb.mobiledev.saferide.entity.Dropofflocation
 import ca.unb.mobiledev.saferide.entity.Stations
 import ca.unb.mobiledev.saferide.entity.User
@@ -29,7 +29,7 @@ class DropOffLocationRepository(application: Application) {
     }
 
     fun deleteLocation(user: User): Int{
-        val dataReadFuture: Future<Int> = database.databaseWriterExecutor.submit(
+        val dataReadFuture: Future<Int> = AppDatabase.databaseWriterExecutor.submit(
             Callable {
                 dropOffLocationDao.deleteLocation(user)
             })
@@ -49,6 +49,6 @@ class DropOffLocationRepository(application: Application) {
     }
 
     private fun insert(dropofflocation: Dropofflocation){
-        database.databaseWriterExecutor.execute{ dropOffLocationDao.insert(dropofflocation) }
+        AppDatabase.databaseWriterExecutor.execute{ dropOffLocationDao.insert(dropofflocation) }
     }
 }

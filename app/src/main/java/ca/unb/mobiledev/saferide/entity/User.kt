@@ -7,9 +7,10 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "user")
 data class User (
 
-    @PrimaryKey @ColumnInfo (name = "user_id") val userId: Int,
-    @ColumnInfo (name = "firstName") val firstName: String?,
-    @ColumnInfo (name = "lastName") val lastName: String?,
-    @ColumnInfo (name = "email") val email: String?,
-    @ColumnInfo (name = "driver") val driver: Boolean,
+    @PrimaryKey @ColumnInfo (name = "user_id") var userId: Int,
+    @ColumnInfo (name = "firstName") var firstName: String?,
+    @ColumnInfo (name = "lastName") var lastName: String?,
+    @ColumnInfo (name = "email") var email: String?,
+    @ColumnInfo (name = "password") var password: String?,
+    @ColumnInfo (name = "driver") var driver: Boolean,
 )

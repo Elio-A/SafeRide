@@ -1,13 +1,11 @@
 package ca.unb.mobiledev.saferide.repository
 
 import android.app.Application
-import androidx.lifecycle.LiveData
 import ca.unb.mobiledev.saferide.dao.DriverShift_DAO
-import ca.unb.mobiledev.saferide.db.database
-import ca.unb.mobiledev.saferide.db.database.Companion.getDatabase
+import ca.unb.mobiledev.saferide.db.AppDatabase
+import ca.unb.mobiledev.saferide.db.AppDatabase.Companion.getDatabase
 import ca.unb.mobiledev.saferide.entity.DriverShift
 import ca.unb.mobiledev.saferide.entity.Stations
-import ca.unb.mobiledev.saferide.entity.User
 import ca.unb.mobiledev.saferide.entity.Vehicle
 
 class DriverShiftRepository(application: Application) {
@@ -32,7 +30,7 @@ class DriverShiftRepository(application: Application) {
 
     }
     private fun insert(driverShift: DriverShift){
-        database.databaseWriterExecutor.execute{ driverDao.insert(driverShift) }
+        AppDatabase.databaseWriterExecutor.execute{ driverDao.insert(driverShift) }
     }
 
 }

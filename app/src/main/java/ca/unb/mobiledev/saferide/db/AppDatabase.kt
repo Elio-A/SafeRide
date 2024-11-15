@@ -9,8 +9,8 @@ import ca.unb.mobiledev.saferide.entity.*
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
 
-@Database(entities = [DriverShift::class, Dropofflocation::class, User::class], version = 1, exportSchema = false)
-abstract class database: RoomDatabase() {
+@Database(entities = [DriverShift::class, Dropofflocation::class, User::class], version = 2, exportSchema = false)
+abstract class AppDatabase: RoomDatabase() {
     abstract fun driverShiftDao(): DriverShift_DAO
     abstract fun dropOffLocationDao(): Drop_off_location_DAO
     abstract fun userDao(): User_DAO
@@ -18,19 +18,19 @@ abstract class database: RoomDatabase() {
 
     companion object{
         @Volatile
-        private var INSTANCE: database? = null
+        private var INSTANCE: AppDatabase? = null
         private const val NUMBER_OF_THREADS = 4
 
         val databaseWriterExecutor: ExecutorService = Executors.newFixedThreadPool(NUMBER_OF_THREADS)
 
-        fun getDatabase(context: Context): database{
+        fun getDatabase(context: Context): AppDatabase{
             val tempInstance = INSTANCE
             if(tempInstance != null){
                 return tempInstance
             }
             synchronized(this){
             val instance = Room.databaseBuilder(context.applicationContext,
-                database::class.java, "app_database")
+                AppDatabase::class.java, "app_database")
                 .build()
 
                 INSTANCE = instance
