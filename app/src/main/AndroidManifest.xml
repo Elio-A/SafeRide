@@ -19,10 +19,7 @@
         android:theme="@style/Theme.SafeRide"
         tools:targetApi="31">
         <activity
-            android:name=".NextLocations"
-            android:exported="false" />
-        <activity
-            android:name=".Next_Pickup"
+            android:name=".sign_up_page"
             android:exported="false" />
         <activity
             android:name=".DriverHome"
@@ -38,14 +35,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="true">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
-
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-        </activity>
-
+            android:exported="false" />
         <activity
             android:name=".HomePageActivity"
             android:exported="false" />
@@ -58,11 +48,6 @@
         <activity
             android:name=".QRCodeScanner"
             android:exported="false" />
-        <!--
-        <activity
-            android:name=".AboutUs"
-            android:exported="false" />
-        -->
         <activity
             android:name=".WorkingHours"
             android:exported="false" />
@@ -70,18 +55,13 @@
             android:name=".Radius"
             android:exported="false" />
         <activity
-            android:name=".ui.login.LoginActivity"
-            android:exported="false"
-            android:label="@string/title_activity_login" />
-
-        <activity
             android:name=".LoginPage"
-            android:exported="false">
-<!--            <intent-filter>-->
-<!--                <action android:name="android.intent.action.MAIN" />-->
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-<!--                <category android:name="android.intent.category.LAUNCHER" />-->
-<!--            </intent-filter>-->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
         </activity>
     </application>
 

@@ -8,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import MockData.*
 import android.content.ContentValues.TAG
 import android.content.Intent
 import android.nfc.Tag
@@ -18,15 +19,16 @@ import androidx.lifecycle.ViewModelProvider
 import ca.unb.mobiledev.saferide.entity.User
 import ca.unb.mobiledev.saferide.viewmodels.UserViewModel
 import java.util.concurrent.Future
+import android.widget.Toast
+import kotlin.math.sign
 
 class LoginPage : AppCompatActivity() {
-    private lateinit var userViewModel: UserViewModel
-    private lateinit var listView: ListView
 
     lateinit var usernameInput : EditText
     lateinit var passwordInput : EditText
     lateinit var loginButton : Button
     lateinit var signupButton : Button
+    private lateinit var dbHelper: DatabaseHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -44,41 +46,30 @@ class LoginPage : AppCompatActivity() {
         loginButton = findViewById(R.id.login_button)
         signupButton = findViewById(R.id.signup_button)
 
-        signupButton.setOnClickListener{
-            val studentId = 3725253
-            val firstName = "Albertus"
-            val lastName = "Koesoema"
-            val email = "albertus.university@unb.ca"
-            val password = "albert"
-            val driver = false
-            addUser(studentId, firstName, lastName, email, password, driver)
-            Toast.makeText(this, "User added", Toast.LENGTH_SHORT).show()
-        //userViewModel.insert(User(userId = studentId, firstName = firstName, lastName = lastName, email = email, driver = driver ))
-        }
+        dbHelper = DatabaseHelper(this)
 
         loginButton.setOnClickListener {
-            val studentId = usernameInput.text.toString().trim()
-            val password = passwordInput.text.toString().trim()
-            searchForUser(studentId.toInt(), password)
-            //call function from userRepository
+            val username = usernameInput.text.toString()
+            val password = passwordInput.text.toString()
 
-        }
-        userViewModel = ViewModelProvider(this)[UserViewModel::class.java]
-    }
-
-    private fun addUser(studentId: Int, firstName: String, lastName: String, email: String, password: String, driver: Boolean){
-        userViewModel.insert(studentId, firstName, lastName, email, password, driver)
-    }
-
-    private fun searchForUser(studentId: Int, password: String){
-        val user: Future<List<User>> = userViewModel.getUserById(studentId, password)
-        if(user != null){
-            Log.i(TAG, "Logged In Successfully!")
             var intent = Intent(this@LoginPage, HomePageActivity::class.java)
-            startActivity(intent)
+
+
+            if(dbHelper.checkUser(username, password)){
+                Toast.makeText(this, "Logged In Successfully!", Toast.LENGTH_SHORT).show()
+                startActivity(intent)
+                finish()
+            }
+            else{
+                Toast.makeText(this, "Username or Password incorrect, please try again!", Toast.LENGTH_SHORT).show()
+            }
+            Log.i("Test Credentials", "Username: $username and Password: $password")
         }
-        else{
-            Log.i(TAG,"GTFO!")
+
+        signupButton.setOnClickListener {
+            intent = Intent(this@LoginPage, sign_up_page::class.java)
+            startActivity(intent)
+            finish()
         }
     }
-}
+}//End LoginPage
