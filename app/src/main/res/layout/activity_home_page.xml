@@ -108,7 +108,17 @@
                 android:layout_height="89dp"
                 android:layout_alignBottom="@+id/qr_code_button"
                 android:backgroundTint="@color/dimgrey"
-                android:hint="Next Pick-Up"
+                android:hint="Next Pickup"
+                android:textSize="30sp"
+                android:textColorHint="@color/lightgrey"/>
+
+            <Button
+                android:id="@+id/car_picking_up"
+                android:layout_width="358dp"
+                android:layout_height="89dp"
+                android:layout_alignBottom="@+id/qr_code_button"
+                android:backgroundTint="@color/dimgrey"
+                android:hint="Car Picking Up"
                 android:textSize="30sp"
                 android:textColorHint="@color/lightgrey"/>
         </LinearLayout>
