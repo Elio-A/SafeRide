@@ -22,6 +22,9 @@
             android:name=".car_picking_up"
             android:exported="false" />
         <activity
+            android:name=".sign_up_page"
+            android:exported="false" />
+        <activity
             android:name=".DriverHome"
             android:exported="false" />
         <activity

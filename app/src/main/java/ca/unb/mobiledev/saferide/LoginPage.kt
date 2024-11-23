@@ -8,10 +8,9 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import MockData.*
-import android.content.ContentValues.TAG
 import android.content.Intent
-import android.nfc.Tag
+import android.widget.Toast
+import ca.unb.mobiledev.saferide.DatabaseHelpers.UserDatabaseHelper
 
 class LoginPage : AppCompatActivity() {
 
@@ -19,6 +18,7 @@ class LoginPage : AppCompatActivity() {
     lateinit var passwordInput : EditText
     lateinit var loginButton : Button
     lateinit var signupButton : Button
+    private lateinit var dbHelper: UserDatabaseHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,21 +36,30 @@ class LoginPage : AppCompatActivity() {
         loginButton = findViewById(R.id.login_button)
         signupButton = findViewById(R.id.signup_button)
 
+        dbHelper = UserDatabaseHelper(this)
+
         loginButton.setOnClickListener {
             val username = usernameInput.text.toString()
             val password = passwordInput.text.toString()
 
             var intent = Intent(this@LoginPage, HomePageActivity::class.java)
 
-            val test : Boolean = MockDataMain.isAUser(username)
-            if(test){
-                Log.i(TAG, "Logged In Successfully!")
+
+            if(dbHelper.checkUser(username, password)){
+                Toast.makeText(this, "Logged In Successfully!", Toast.LENGTH_SHORT).show()
                 startActivity(intent)
+                finish()
             }
             else{
-                Log.i(TAG,"GTFO!")
+                Toast.makeText(this, "Username or Password incorrect, please try again!", Toast.LENGTH_SHORT).show()
             }
             Log.i("Test Credentials", "Username: $username and Password: $password")
         }
+
+        signupButton.setOnClickListener {
+            intent = Intent(this@LoginPage, sign_up_page::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
-}
+}//End LoginPage

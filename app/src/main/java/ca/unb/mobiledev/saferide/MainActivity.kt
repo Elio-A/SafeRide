@@ -46,5 +46,11 @@ class MainActivity : AppCompatActivity() {
             val intent = Intent(this@MainActivity, CarPhotos::class.java)
             startActivity(intent)
         }
+
+        val pickupButton: Button = findViewById(R.id.next_pickup)
+        pickupButton.setOnClickListener {
+            val intent = Intent(this@MainActivity, Next_Pickup::class.java)
+            startActivity(intent)
+        }
     }
 }//End MainActivity
