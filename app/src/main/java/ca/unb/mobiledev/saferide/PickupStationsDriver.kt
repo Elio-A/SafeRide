@@ -47,21 +47,25 @@ class PickupStationsDriver : AppCompatActivity() {
                     R.id.imageButton -> {
                         //save sub option
                         Log.i(TAG, "SUB option")
+                        intent.putExtra("KEY_STATION", "SUB");
                     }
 
                     R.id.imageButton2 -> {
                         //save head hall button
                         Log.i(TAG, "Head hall Option")
+                        intent.putExtra("KEY_STATION", "head hall");
                     }
 
                     R.id.STUImageButton -> {
                         //save stu option
                         Log.i(TAG, "STU option")
+                        intent.putExtra("KEY_STATION", "STU");
                     }
 
                     R.id.CurrieButton -> {
                         //save currie option
                         Log.i(TAG, "Currie Option")
+                        intent.putExtra("KEY_STATION", "Currie Center");
                     }
                 }
             }
