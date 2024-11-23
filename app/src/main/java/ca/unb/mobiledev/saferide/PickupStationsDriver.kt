@@ -41,6 +41,8 @@ class PickupStationsDriver : AppCompatActivity() {
 
         val buttons = listOf(subButton, headHallButton, stuButton, currieButton)
 
+        val intent = Intent(this, DriverHome::class.java)
+
         for(button in buttons){
             button.setOnClickListener { view ->
                 when (view.id) {
@@ -68,9 +70,8 @@ class PickupStationsDriver : AppCompatActivity() {
                         intent.putExtra("KEY_STATION", "Currie Center");
                     }
                 }
+                startActivity(intent)
             }
-            val intent = Intent(this, DriverHome::class.java)
-            startActivity(intent)
-        }
+        }3717
     }
 }
