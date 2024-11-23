@@ -25,6 +25,9 @@
             android:name=".sign_up_page"
             android:exported="false" />
         <activity
+            android:name=".DriverHomePage"
+            android:exported="false" />
+        <activity
             android:name=".DriverHome"
             android:exported="false" />
         <activity

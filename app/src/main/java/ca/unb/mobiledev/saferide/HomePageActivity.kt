@@ -8,6 +8,7 @@ import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import java.sql.Driver
 
 class HomePageActivity : AppCompatActivity(){
 
@@ -26,6 +27,7 @@ class HomePageActivity : AppCompatActivity(){
         val workingHourButton : Button = findViewById(R.id.working_hours_button)
         val aboutUsButton : Button = findViewById(R.id.about_us_button)
         val driverViewButton: Button = findViewById(R.id.driver_button)
+        val driverHomePage: Button = findViewById(R.id.driver_home_page)
         val nextPickupButton: Button = findViewById(R.id.next_pickup_button)
 
         stationButton.setOnClickListener{
@@ -55,6 +57,11 @@ class HomePageActivity : AppCompatActivity(){
 
         nextPickupButton.setOnClickListener {
             val intent = Intent(this@HomePageActivity, Next_Pickup::class.java)
+            startActivity(intent)
+        }
+
+        driverHomePage.setOnClickListener {
+            val intent = Intent(this@HomePageActivity, DriverHomePage::class.java)
             startActivity(intent)
         }
     }
