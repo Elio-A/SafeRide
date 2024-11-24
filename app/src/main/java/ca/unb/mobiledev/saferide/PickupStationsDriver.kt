@@ -41,37 +41,49 @@ class PickupStationsDriver : AppCompatActivity() {
 
         val buttons = listOf(subButton, headHallButton, stuButton, currieButton)
 
-        val intent = Intent(this, DriverHome::class.java)
+
 
         for(button in buttons){
-            button.setOnClickListener { view ->
+            val intent = Intent(this, DriverHome::class.java)
+
+            val frontImage = intent.getStringExtra("KEY_FRONTIMAGE")
+            val rightImage = intent.getStringExtra("KEY_RIGHTIMAGE")
+            val leftImage = intent.getStringExtra("KEY_LEFTIMAGE")
+            val backImage = intent.getStringExtra("KEY_BACKIMAGE")
+
+            intent.putExtra("KEY_FRONTIMAGE", frontImage)
+            intent.putExtra("KEY_LEFTIMAGE", leftImage)
+            intent.putExtra("KEY_BACKIMAGE", backImage)
+            intent.putExtra("KEY_RIGHTIMAGE", rightImage)
+            button.setOnClickListener {
+                view ->
                 when (view.id) {
                     R.id.imageButton -> {
                         //save sub option
                         Log.i(TAG, "SUB option")
-                        intent.putExtra("KEY_STATION", "SUB");
+                        intent.putExtra("KEY_STATION", "SUB")
                     }
 
                     R.id.imageButton2 -> {
                         //save head hall button
                         Log.i(TAG, "Head hall Option")
-                        intent.putExtra("KEY_STATION", "head hall");
+                        intent.putExtra("KEY_STATION", "head hall")
                     }
 
                     R.id.STUImageButton -> {
                         //save stu option
                         Log.i(TAG, "STU option")
-                        intent.putExtra("KEY_STATION", "STU");
+                        intent.putExtra("KEY_STATION", "STU")
                     }
 
                     R.id.CurrieButton -> {
                         //save currie option
                         Log.i(TAG, "Currie Option")
-                        intent.putExtra("KEY_STATION", "Currie Center");
+                        intent.putExtra("KEY_STATION", "Currie Center")
                     }
                 }
                 startActivity(intent)
             }
-        }3717
+        }
     }
 }
