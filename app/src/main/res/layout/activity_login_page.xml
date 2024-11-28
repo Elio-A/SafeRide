@@ -6,29 +6,64 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-
-    android:background="@drawable/saferide_login_background"
+    android:background="@color/white"
     tools:context=".LoginPage">
 
     <ImageView
-        android:id="@+id/login_image_logo"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
+        android:id="@+id/login_saferide_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="190dp"
-        android:elevation="1dp"
-        android:background="@drawable/account_icon_background"
-        android:src="@drawable/account_logo"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/saferide_logo"
         />
+
+    <ImageView
+        android:id="@+id/login_stu_logo"
+        android:layout_width="150dp"
+        android:layout_marginTop="645dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginStart="40dp"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/stulogo"
+        />
+
+    <ImageView
+        android:id="@+id/login_gsa_logo"
+        android:layout_width="180dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="centerCrop"
+        android:layout_marginTop="645dp"
+        android:layout_marginStart="90dp"
+        android:src="@drawable/gsalogo"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="240dp"
+        android:text="Enter Your Details"
+        android:textColor="@color/saferideOrange"
+        android:shadowColor="@color/black"
+        android:shadowRadius="10"
+        android:shadowDx="10"
+        android:shadowDy="1"
+        android:textSize="40dp"
+        android:textStyle="bold"
+        android:textAlignment="center"/>
 
     <RelativeLayout
         android:id="@+id/login_input_space"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:paddingTop="65dp"
-        android:paddingBottom="40dp"
+        android:layout_marginTop="320dp"
+        android:padding="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
         android:background="@drawable/login_space_background"
+        android:orientation="vertical"
         >
 
         <EditText
@@ -37,12 +72,14 @@
             android:layout_height="wrap_content"
             android:hint="Student Number"
             android:inputType="number"
-            android:textColorHint="@color/white"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:textAlignment="center"
             android:background="@drawable/rectangle_button_background"
             android:padding="15dp"
             android:layout_marginLeft="15dp"
             android:layout_marginRight="15dp"
+            android:gravity="center"
             />
 
         <EditText
@@ -51,7 +88,8 @@
             android:layout_height="wrap_content"
             android:hint="Password"
             android:inputType="textPassword"
-            android:textColorHint="@color/white"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
             android:textAlignment="center"
             android:background="@drawable/rectangle_button_background"
             android:layout_below="@id/login_username"
@@ -66,7 +104,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Login"
-            android:backgroundTint="@color/blackberry"
+            android:backgroundTint="@color/saferideOrange"
             android:layout_below="@id/login_password"
             android:padding="15dp"
             android:layout_marginTop="25dp"
@@ -79,7 +117,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Sign Up"
-            android:backgroundTint="@color/blackberry"
+            android:backgroundTint="@color/saferideOrange"
             android:layout_below="@id/login_password"
             android:padding="15dp"
             android:layout_marginTop="25dp"

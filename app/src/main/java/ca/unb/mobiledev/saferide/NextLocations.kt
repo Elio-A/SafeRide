@@ -31,7 +31,7 @@ class NextLocations : AppCompatActivity() {
         var seat = 0
         var station = 0
 
-        if(extras != null) {
+        if (extras != null) {
             seat = extras.getInt("SEAT")
             station = extras.getInt("STATION")
         }

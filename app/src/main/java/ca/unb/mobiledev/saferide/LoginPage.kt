@@ -12,6 +12,15 @@ import MockData.*
 import android.content.ContentValues.TAG
 import android.content.Intent
 import android.nfc.Tag
+import android.widget.ListView
+import android.widget.Toast
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.ViewModelProvider
+import ca.unb.mobiledev.saferide.entity.User
+import ca.unb.mobiledev.saferide.viewmodels.UserViewModel
+import java.util.concurrent.Future
+import android.widget.Toast
+import kotlin.math.sign
 
 class LoginPage : AppCompatActivity() {
 
@@ -19,6 +28,7 @@ class LoginPage : AppCompatActivity() {
     lateinit var passwordInput : EditText
     lateinit var loginButton : Button
     lateinit var signupButton : Button
+    private lateinit var dbHelper: DatabaseHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,21 +46,30 @@ class LoginPage : AppCompatActivity() {
         loginButton = findViewById(R.id.login_button)
         signupButton = findViewById(R.id.signup_button)
 
+        dbHelper = DatabaseHelper(this)
+
         loginButton.setOnClickListener {
             val username = usernameInput.text.toString()
             val password = passwordInput.text.toString()
 
             var intent = Intent(this@LoginPage, HomePageActivity::class.java)
 
-            val test : Boolean = MockDataMain.isAUser(username)
-            if(test){
-                Log.i(TAG, "Logged In Successfully!")
+
+            if(dbHelper.checkUser(username, password)){
+                Toast.makeText(this, "Logged In Successfully!", Toast.LENGTH_SHORT).show()
                 startActivity(intent)
+                finish()
             }
             else{
-                Log.i(TAG,"GTFO!")
+                Toast.makeText(this, "Username or Password incorrect, please try again!", Toast.LENGTH_SHORT).show()
             }
             Log.i("Test Credentials", "Username: $username and Password: $password")
         }
+
+        signupButton.setOnClickListener {
+            intent = Intent(this@LoginPage, sign_up_page::class.java)
+            startActivity(intent)
+            finish()
+        }
     }
-}
+}//End LoginPage
