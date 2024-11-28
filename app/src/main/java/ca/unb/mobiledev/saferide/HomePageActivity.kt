@@ -39,7 +39,6 @@ class HomePageActivity : AppCompatActivity(){
         val workingHourButton : Button = findViewById(R.id.working_hours_button)
         val aboutUsButton : Button = findViewById(R.id.about_us_button)
         val qrCodeScanner : Button = findViewById(R.id.qr_code_button)
-        val driverViewButton: Button = findViewById(R.id.driver_button)
         val nextPickupButton: Button = findViewById(R.id.next_pickup_button)
         val newsButton: Button = findViewById(R.id.news_button)
 
@@ -71,12 +70,7 @@ class HomePageActivity : AppCompatActivity(){
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data = Uri.parse("https://www.unbsu.ca/saferide")
             startActivity(intent)
-        }
-
-        driverViewButton.setOnClickListener{
-            val intent = Intent(this@HomePageActivity, SafeRideCars::class.java)
-            startActivity(intent)
-        }
+        } 
 
         nextPickupButton.setOnClickListener {
             val intent = Intent(this@HomePageActivity, Next_Pickup::class.java)
