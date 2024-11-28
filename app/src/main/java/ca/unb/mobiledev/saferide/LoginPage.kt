@@ -12,6 +12,13 @@ import MockData.*
 import android.content.ContentValues.TAG
 import android.content.Intent
 import android.nfc.Tag
+import android.widget.ListView
+import android.widget.Toast
+import androidx.lifecycle.LiveData
+import androidx.lifecycle.ViewModelProvider
+import ca.unb.mobiledev.saferide.entity.User
+import ca.unb.mobiledev.saferide.viewmodels.UserViewModel
+import java.util.concurrent.Future
 import android.widget.Toast
 import kotlin.math.sign
 

@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="@drawable/home_activity_backgroud_dradient"
+    android:background="@drawable/home_activity_background_gradient"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Aboutus">

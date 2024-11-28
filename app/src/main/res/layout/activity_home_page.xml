@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/home_activity_backgroud_dradient"
+    android:background="@drawable/home_activity_background_gradient"
     tools:context=".HomePageActivity">
 
     <ScrollView
@@ -25,6 +25,8 @@
                 android:layout_height="284dp"
                 android:src="@drawable/saferide_homepage" />
 
+
+
             <Button
                 android:id="@+id/pickup_stations_button"
                 android:layout_width="358dp"
@@ -34,6 +36,15 @@
                 android:hint="@string/pick_up_stations"
                 android:textColorHint="@color/lightgrey"
                 android:textSize="30sp" />
+            <Button
+                android:id="@+id/next_pickup_button"
+                android:layout_width="358dp"
+                android:layout_height="89dp"
+                android:layout_alignBottom="@+id/qr_code_button"
+                android:backgroundTint="@color/dimgrey"
+                android:hint="Live Status"
+                android:textSize="30sp"
+                android:textColorHint="@color/lightgrey"/>
 
             <Button
                 android:id="@+id/radius_button"
@@ -53,32 +64,7 @@
                 android:backgroundTint="@color/dimgrey"
                 android:hint="@string/working_hours"
                 android:textSize="30sp"
-                android:textColorHint="@color/lightgrey"
-                />
-
-            <Button
-                android:id="@+id/about_us_button"
-                android:layout_width="358dp"
-                android:layout_height="89dp"
-                android:layout_alignBottom="@+id/working_hours_button"
-                android:layout_centerHorizontal="true"
-                android:backgroundTint="@color/dimgrey"
-                android:hint="@string/about_us"
-                android:textSize="30sp"
-                android:textColorHint="@color/lightgrey"
-                />
-
-            <Button
-                android:id="@+id/news_button"
-                android:layout_width="358dp"
-                android:layout_height="89dp"
-                android:layout_alignBottom="@+id/about_us_button"
-                android:layout_centerHorizontal="true"
-                android:backgroundTint="@color/dimgrey"
-                android:hint="@string/news"
-                android:textSize="30sp"
-                android:textColorHint="@color/lightgrey"
-                />
+                android:textColorHint="@color/lightgrey"/>
 
             <Button
                 android:id="@+id/qr_code_button"
@@ -89,8 +75,30 @@
                 android:backgroundTint="@color/dimgrey"
                 android:hint="@string/qr_code"
                 android:textSize="30sp"
-                android:textColorHint="@color/lightgrey"
-                />
+                android:textColorHint="@color/lightgrey" />
+
+            <Button
+                android:id="@+id/news_button"
+                android:layout_width="358dp"
+                android:layout_height="89dp"
+                android:layout_alignBottom="@+id/about_us_button"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="@color/dimgrey"
+                android:hint="@string/news"
+                android:textSize="30sp"
+                android:textColorHint="@color/lightgrey"/>
+
+            <Button
+                android:id="@+id/about_us_button"
+                android:layout_width="358dp"
+                android:layout_height="89dp"
+                android:layout_alignBottom="@+id/working_hours_button"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="@color/dimgrey"
+                android:hint="@string/about_us"
+                android:textSize="30sp"
+                android:textColorHint="@color/lightgrey"/>
+
 
             <Button
                 android:id="@+id/driver_button"
@@ -99,16 +107,6 @@
                 android:layout_alignBottom="@+id/qr_code_button"
                 android:backgroundTint="@color/dimgrey"
                 android:hint="@string/driver_view"
-                android:textSize="30sp"
-                android:textColorHint="@color/lightgrey"/>
-
-            <Button
-                android:id="@+id/next_pickup_button"
-                android:layout_width="358dp"
-                android:layout_height="89dp"
-                android:layout_alignBottom="@+id/qr_code_button"
-                android:backgroundTint="@color/dimgrey"
-                android:hint="Next Pick-Up"
                 android:textSize="30sp"
                 android:textColorHint="@color/lightgrey"/>
         </LinearLayout>
