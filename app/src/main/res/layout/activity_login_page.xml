@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+<<<<<<< HEAD
     android:background="@color/white"
     tools:context=".LoginPage">
 
@@ -16,6 +17,22 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:src="@drawable/saferide_logo"
+=======
+
+    android:background="@color/loginBG"
+    tools:context=".LoginPage">
+
+    <ImageView
+        android:id="@+id/login_image_logo"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="200dp"
+        android:layout_centerHorizontal="true"
+        android:elevation="1dp"
+        android:background="@drawable/account_icon_background"
+        android:src="@drawable/account_logo"
+        android:scaleType="fitCenter"
+>>>>>>> 2cc1038d8e44d272c9846b92c1e5577d2e2282b1
         />
 
     <ImageView
@@ -56,12 +73,21 @@
 
     <RelativeLayout
         android:id="@+id/login_input_space"
+<<<<<<< HEAD
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="320dp"
+=======
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+>>>>>>> 2cc1038d8e44d272c9846b92c1e5577d2e2282b1
         android:padding="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
+        android:layout_alignTop="@id/login_image_logo"
+        android:layout_marginTop="80dp"
         android:background="@drawable/login_space_background"
         android:orientation="vertical"
         >
@@ -70,6 +96,8 @@
             android:id="@+id/login_username"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="70dp"
+            android:layout_centerHorizontal="true"
             android:hint="Student Number"
             android:inputType="number"
             android:textColor="@color/black"
@@ -84,13 +112,14 @@
 
         <EditText
             android:id="@+id/login_password"
-            android:layout_width="match_parent"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:hint="Password"
             android:inputType="textPassword"
             android:textColor="@color/black"
             android:textColorHint="@color/black"
             android:textAlignment="center"
+            android:layout_centerHorizontal="true"
             android:background="@drawable/rectangle_button_background"
             android:layout_below="@id/login_username"
             android:padding="15dp"
@@ -101,29 +130,25 @@
 
         <Button
             android:id="@+id/login_button"
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="Login"
             android:backgroundTint="@color/saferideOrange"
             android:layout_below="@id/login_password"
-            android:padding="15dp"
             android:layout_marginTop="25dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="200dp"
+            android:layout_alignStart="@id/login_password"
             />
 
         <Button
             android:id="@+id/signup_button"
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="Sign Up"
             android:backgroundTint="@color/saferideOrange"
             android:layout_below="@id/login_password"
-            android:padding="15dp"
             android:layout_marginTop="25dp"
-            android:layout_marginLeft="215dp"
-            android:layout_marginRight="15dp"
+            android:layout_alignEnd="@id/login_password"
             />
 
     </RelativeLayout>
-</FrameLayout>
+</RelativeLayout>
