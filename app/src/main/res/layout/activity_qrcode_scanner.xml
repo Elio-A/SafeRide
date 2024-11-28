@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/home_activity_backgroud_dradient"
+    android:background="@drawable/home_activity_background_gradient"
     tools:context=".QRCodeScanner">
 
     <RelativeLayout
@@ -48,11 +48,11 @@
 
     </RelativeLayout>
 
-    <com.journeyapps.barcodescanner.DecoratedBarcodeView
-        android:id="@+id/barcode_scanner"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        app:layout_constraintTop_toBottomOf="@id/relativeLayout"
-        app:layout_constraintBottom_toBottomOf="parent"/>
+<!--    <com.journeyapps.barcodescanner.DecoratedBarcodeView-->
+<!--        android:id="@+id/barcode_scanner"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/relativeLayout"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"/>-->
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,7 +19,6 @@ import androidx.lifecycle.ViewModelProvider
 import ca.unb.mobiledev.saferide.entity.User
 import ca.unb.mobiledev.saferide.viewmodels.UserViewModel
 import java.util.concurrent.Future
-import android.widget.Toast
 import kotlin.math.sign
 
 class LoginPage : AppCompatActivity() {
@@ -55,7 +54,7 @@ class LoginPage : AppCompatActivity() {
             var intent = Intent(this@LoginPage, HomePageActivity::class.java)
 
 
-            if(dbHelper.checkUser(username, password)){
+            if(dbHelper.checkUser(username, password, false)){
                 Toast.makeText(this, "Logged In Successfully!", Toast.LENGTH_SHORT).show()
                 startActivity(intent)
                 finish()
