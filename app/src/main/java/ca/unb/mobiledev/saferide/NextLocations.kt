@@ -39,7 +39,4 @@ class NextLocations : AppCompatActivity() {
         //val nextStops: LiveData<List<Dropofflocation>> = nextStops.getNextPassengers(seat, station)
 
     }
-
-
-
 }
