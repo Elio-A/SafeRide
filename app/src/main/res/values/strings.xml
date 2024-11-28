@@ -20,6 +20,7 @@
     <string name="button">Button</string>
     <string name="qr_code_scanner">QR Code</string>
     <string name="radius">Radius</string>
+    <string name="next_pick_up">Next Pick-up</string>
     <string name="car_photos">Car Photos</string>
     <string name="plus_Sign">+</string>
     <string name="front_view">Front View</string>

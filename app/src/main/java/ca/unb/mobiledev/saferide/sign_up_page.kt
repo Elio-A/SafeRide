@@ -3,6 +3,7 @@ package ca.unb.mobiledev.saferide
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
@@ -17,6 +18,7 @@ class sign_up_page : AppCompatActivity() {
     private lateinit var confirmPasswordEditText : EditText
     private lateinit var signupButton : Button
     private lateinit var dbHelper: DatabaseHelper
+    private lateinit var isDriverCheckbox: CheckBox
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -33,6 +35,7 @@ class sign_up_page : AppCompatActivity() {
         confirmPasswordEditText = findViewById(R.id.confirm_password)
         signupButton = findViewById(R.id.signup_button)
         dbHelper = DatabaseHelper(this)
+        isDriverCheckbox = findViewById(R.id.is_driver_checkbox)
 
         signupButton.setOnClickListener {
             intent = Intent(this@sign_up_page, LoginPage::class.java)
@@ -44,12 +47,13 @@ class sign_up_page : AppCompatActivity() {
         val username : String = usernameEditText.text.toString()
         val password : String = passwordEditText.text.toString()
         val confirmPassword : String = confirmPasswordEditText.text.toString()
+        val isDriver: Boolean = isDriverCheckbox.isChecked
 
         if(password.isEmpty() || confirmPassword.isEmpty() || username.isEmpty()){
             Toast.makeText(this, "Please fill in the empty field(s)!", Toast.LENGTH_SHORT).show()
         }
         else if(password == confirmPassword){
-            val result = dbHelper.addUser(username, password)
+            val result = dbHelper.addUser(username, password, isDriver)
             if(result != -1L) {
                 Toast.makeText(this, "User Created Successfully!", Toast.LENGTH_SHORT).show()
                 startActivity(intent)

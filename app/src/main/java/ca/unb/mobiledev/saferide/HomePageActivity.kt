@@ -71,11 +71,10 @@ class HomePageActivity : AppCompatActivity(){
             startActivity(intent)
         }
 
-        //Here is your button!!!!!!
-//        nextPickupButton.setOnClickListener {
-//            val intent = Intent(this@HomePageActivity, NextPickupActivity::class.java)
-//            startActivity(intent)
-//        }
+        nextPickupButton.setOnClickListener {
+            val intent = Intent(this@HomePageActivity, Next_Pickup::class.java)
+            startActivity(intent)
+        }
     }
 
     private fun requestCameraPermission(){
