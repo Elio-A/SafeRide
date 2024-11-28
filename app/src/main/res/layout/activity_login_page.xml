@@ -6,18 +6,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-<<<<<<< HEAD
-    android:background="@color/white"
-    tools:context=".LoginPage">
-
-    <ImageView
-        android:id="@+id/login_saferide_logo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:src="@drawable/saferide_logo"
-=======
 
     android:background="@color/loginBG"
     tools:context=".LoginPage">
@@ -32,7 +20,6 @@
         android:background="@drawable/account_icon_background"
         android:src="@drawable/account_logo"
         android:scaleType="fitCenter"
->>>>>>> 2cc1038d8e44d272c9846b92c1e5577d2e2282b1
         />
 
     <ImageView
@@ -73,16 +60,10 @@
 
     <RelativeLayout
         android:id="@+id/login_input_space"
-<<<<<<< HEAD
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="320dp"
-=======
         android:layout_width="500dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_gravity="center"
->>>>>>> 2cc1038d8e44d272c9846b92c1e5577d2e2282b1
         android:padding="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginRight="16dp"
@@ -136,8 +117,12 @@
             android:backgroundTint="@color/saferideOrange"
             android:layout_below="@id/login_password"
             android:layout_marginTop="25dp"
+            android:layout_below="@id/login_password"
+            android:backgroundTint="@color/dimgrey"
+            android:hint="Login"
+            android:textColorHint="@color/lightgrey"
             android:layout_alignStart="@id/login_password"
-            />
+            android:textSize="15sp" />
 
         <Button
             android:id="@+id/signup_button"
@@ -146,9 +131,12 @@
             android:text="Sign Up"
             android:backgroundTint="@color/saferideOrange"
             android:layout_below="@id/login_password"
-            android:layout_marginTop="25dp"
             android:layout_alignEnd="@id/login_password"
-            />
+            android:layout_marginTop="25dp"
+            android:backgroundTint="@color/dimgrey"
+            android:hint="Sign up"
+            android:textColorHint="@color/lightgrey"
+            android:textSize="15sp" />
 
     </RelativeLayout>
 </RelativeLayout>
