@@ -41,6 +41,7 @@ class HomePageActivity : AppCompatActivity(){
         val qrCodeScanner : Button = findViewById(R.id.qr_code_button)
         val driverViewButton: Button = findViewById(R.id.driver_button)
         val nextPickupButton: Button = findViewById(R.id.next_pickup_button)
+        val newsButton: Button = findViewById(R.id.news_button)
 
         stationButton.setOnClickListener{
             val intent = Intent(this@HomePageActivity, stations::class.java)
@@ -64,6 +65,12 @@ class HomePageActivity : AppCompatActivity(){
 
         qrCodeScanner.setOnClickListener{
             requestCameraPermission()
+        }
+
+        newsButton.setOnClickListener{
+            val intent = Intent(Intent.ACTION_VIEW)
+            intent.data = Uri.parse("https://www.unbsu.ca/saferide")
+            startActivity(intent)
         }
 
         driverViewButton.setOnClickListener{

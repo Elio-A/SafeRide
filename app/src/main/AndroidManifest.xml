@@ -32,6 +32,10 @@
         <activity
             android:name=".CarPhotos"
             android:exported="false" />
+
+        <activity
+            android:name=".Next_Pickup"
+            android:exported="false"/>
         <activity
             android:name=".SafeRideCars"
             android:exported="false" />
