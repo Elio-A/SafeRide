@@ -70,7 +70,7 @@ class HomePageActivity : AppCompatActivity(){
             val intent = Intent(Intent.ACTION_VIEW)
             intent.data = Uri.parse("https://www.unbsu.ca/saferide")
             startActivity(intent)
-        } 
+        }
 
         nextPickupButton.setOnClickListener {
             val intent = Intent(this@HomePageActivity, Next_Pickup::class.java)
