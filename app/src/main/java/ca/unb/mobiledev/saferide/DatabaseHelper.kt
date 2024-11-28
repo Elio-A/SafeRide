@@ -4,6 +4,7 @@ import android.content.ContentValues
 import android.content.Context
 import android.database.sqlite.SQLiteDatabase
 import android.database.sqlite.SQLiteOpenHelper
+import android.util.Log
 
 class DatabaseHelper(context: Context):
 SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION)
@@ -36,14 +37,15 @@ SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION)
         onCreate(db)
     }
 
-    fun addUser(username: String, password: String, isdriver: Boolean): Long{
+    fun addUser(username: String, password: String, isDriver: Boolean): Long{
         val db = this.writableDatabase
         val values = ContentValues()
         values.put(COLUMN_USERNAME, username)
         values.put(COLUMN_PASSWORD, password)
-        values.put(IS_DRIVER, if (isdriver) 1 else 0)
+        values.put(IS_DRIVER, if (isDriver) 1 else 0)
         val result = db.insert(TABLE_USERS, null, values)
         db.close()
+        Log.d("DatabaseHelper", "Insert result: $result")
         return result
     }
 

@@ -137,10 +137,12 @@ class HomePageActivity : AppCompatActivity(){
 
     override fun onBackPressed(){
         AlertDialog.Builder(this)
-            .setTitle("Confirm Exit")
-            .setMessage("Are you sure you want to exit the app?")
+            .setTitle("Confirm Logout")
+            .setMessage("Are you sure you want to log out?")
             .setPositiveButton("Yes") { _, _ ->
                 super.onBackPressed()
+                intent = Intent(this@HomePageActivity, LoginPage::class.java)
+                startActivity(intent)
                 finishAffinity()
             }
             .setNegativeButton("No", null)
