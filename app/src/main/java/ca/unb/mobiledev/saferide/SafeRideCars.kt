@@ -23,7 +23,6 @@ class SafeRideCars : AppCompatActivity() {
         val firstCar : ImageButton = findViewById(R.id.first_car)
         val secondCar: ImageButton = findViewById(R.id.second_car)
         val thirdCar: ImageButton = findViewById(R.id.third_car)
-        val fourthCar: ImageButton = findViewById(R.id.fourth_car)
 
         firstCar.setOnClickListener{
             val intent = Intent(this@SafeRideCars, CarPhotos::class.java)
@@ -36,11 +35,6 @@ class SafeRideCars : AppCompatActivity() {
         }
 
         thirdCar.setOnClickListener{
-            val intent = Intent(this@SafeRideCars, CarPhotos::class.java)
-            startActivity(intent)
-        }
-
-        fourthCar.setOnClickListener{
             val intent = Intent(this@SafeRideCars, CarPhotos::class.java)
             startActivity(intent)
         }
