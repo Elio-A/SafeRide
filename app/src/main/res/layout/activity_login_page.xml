@@ -75,23 +75,25 @@
             android:id="@+id/login_button"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Login"
-            android:backgroundTint="@color/blackberry"
-            android:layout_below="@id/login_password"
             android:layout_marginTop="25dp"
+            android:layout_below="@id/login_password"
+            android:backgroundTint="@color/dimgrey"
+            android:hint="Login"
+            android:textColorHint="@color/lightgrey"
             android:layout_alignStart="@id/login_password"
-            />
+            android:textSize="15sp" />
 
         <Button
             android:id="@+id/signup_button"
             android:layout_width="150dp"
             android:layout_height="wrap_content"
-            android:text="Sign Up"
-            android:backgroundTint="@color/blackberry"
             android:layout_below="@id/login_password"
-            android:layout_marginTop="25dp"
             android:layout_alignEnd="@id/login_password"
-            />
+            android:layout_marginTop="25dp"
+            android:backgroundTint="@color/dimgrey"
+            android:hint="Sign up"
+            android:textColorHint="@color/lightgrey"
+            android:textSize="15sp" />
 
     </RelativeLayout>
 </RelativeLayout>

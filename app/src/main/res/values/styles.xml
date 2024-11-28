@@ -4,4 +4,10 @@
     <style name="Flex">
         <item name="android:layout_marginBottom">16dp</item>
     </style>
+
+    <style name="CustomButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/rectangle_button_background</item>
+        <item name="android:textColor">@color/lightgrey</item>
+    </style>
+
 </resources>
