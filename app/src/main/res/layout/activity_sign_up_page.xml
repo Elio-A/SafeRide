@@ -81,15 +81,35 @@
             android:layout_marginRight="15dp"
             />
 
+        <LinearLayout
+            android:id="@+id/is_driver_container"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rectangle_button_background"
+            android:layout_below="@id/confirm_password"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:padding="8dp">
+
+            <CheckBox
+                android:id="@+id/is_driver_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="I am a driver"
+                android:textColor="@color/white"
+                />
+
+        </LinearLayout>
+
         <Button
             android:id="@+id/signup_button"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Sign Up"
             android:backgroundTint="@color/blackberry"
-            android:layout_below="@id/confirm_password"
+            android:layout_below="@id/is_driver_container"
             android:padding="15dp"
-            android:layout_marginTop="25dp"
+            android:layout_marginTop="20dp"
             android:layout_marginLeft="75dp"
             android:layout_marginRight="75dp"
             />

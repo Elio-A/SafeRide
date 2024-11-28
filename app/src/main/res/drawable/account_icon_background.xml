@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="oval">
+<<<<<<< HEAD
+    <stroke android:width="1dip" android:color="@color/gray"/>
+    <solid android:color="@color/gray"/>
+=======
     <stroke android:width="3dip" android:color="@color/black"/>
     <solid android:color="@color/blackberry"/>
+>>>>>>> 2cc1038d8e44d272c9846b92c1e5577d2e2282b1
 
 </shape>
