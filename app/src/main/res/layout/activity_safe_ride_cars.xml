@@ -27,13 +27,13 @@
                     android:layout_width="350dp"
                     android:layout_height="350dp"
                     android:contentDescription="Image of second saferide car"
-                    android:src="@drawable/subie_suv"
+                    android:src="@drawable/subie_suv_resized"
                     android:scaleType="fitXY"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="SafeRide Car Number 1"
+                    android:hint="License Plate: KCT 397"
                     android:textColorHint="@color/white"
                     android:textSize="22sp"
                     android:textAlignment="center"
@@ -54,12 +54,12 @@
                     android:layout_height="350dp"
                     android:contentDescription="Image of second saferide car"
                     android:scaleType="fitXY"
-                    android:src="@drawable/subie_suv"/>
+                    android:src="@drawable/subie_suv_resized"/>
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:hint="SafeRide Car Number 2"
+                    android:hint="License Plate: KAV 699"
                     android:textAlignment="center"
                     android:textColorHint="@color/white"
                     android:textSize="22sp" />
@@ -79,38 +79,12 @@
                     android:layout_height="350dp"
                     android:contentDescription="Image of third saferide car"
                     android:scaleType="fitXY"
-                    android:src="@drawable/dodge_van" />
+                    android:src="@drawable/dodge_van_resized" />
 
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:hint="License Plate: JOM 449"
-                    android:textColorHint="@color/white"
-                    android:textSize="22sp"
-                    android:textAlignment="center"
-                    />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:gravity="center_horizontal"
-                android:layout_marginTop="16dp">
-
-                <ImageButton
-                    android:id="@+id/fourth_car"
-                    android:layout_width="350dp"
-                    android:layout_height="350dp"
-                    android:contentDescription="Image of fourth saferide car"
-                    android:src="@drawable/dodge_van"
-                    android:scaleType="fitXY"/>
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:hint="License Plate #4"
                     android:textColorHint="@color/white"
                     android:textSize="22sp"
                     android:textAlignment="center"
