@@ -47,13 +47,22 @@ SQLiteOpenHelper(context, DATABASE_NAME, null, DATABASE_VERSION)
         return result
     }
 
-    fun checkUser(username: String, password: String, isdriver: Boolean): Boolean{
+    fun checkUser(username: String, password: String): Pair<Boolean, Boolean>{
         val db = this.readableDatabase
-        val query = "select * from $TABLE_USERS where $COLUMN_USERNAME = ? and $COLUMN_PASSWORD = ? and $IS_DRIVER = ?"
-        val cursor = db.rawQuery(query, arrayOf(username, password, if (isdriver) "1" else "0"))
-        val result = cursor.count > 0
+        val query = "select * from $TABLE_USERS where $COLUMN_USERNAME = ? and $COLUMN_PASSWORD = ?"
+        val cursor = db.rawQuery(query, arrayOf(username, password))
+        val userExists = cursor.count > 0
+        var isDriver = false
+
+        if(userExists){
+            cursor.moveToFirst()
+            val driverColumnIndex = cursor.getColumnIndex(IS_DRIVER)
+            if(driverColumnIndex != -1){
+                isDriver = cursor.getInt(driverColumnIndex) == 1
+            }
+        }
         cursor.close()
         db.close()
-        return result
+        return Pair(userExists, isDriver)
     }
 }

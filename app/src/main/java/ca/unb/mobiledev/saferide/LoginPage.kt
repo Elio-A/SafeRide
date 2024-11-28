@@ -19,7 +19,6 @@ import androidx.lifecycle.ViewModelProvider
 import ca.unb.mobiledev.saferide.entity.User
 import ca.unb.mobiledev.saferide.viewmodels.UserViewModel
 import java.util.concurrent.Future
-import android.widget.Toast
 import kotlin.math.sign
 
 class LoginPage : AppCompatActivity() {
@@ -52,18 +51,24 @@ class LoginPage : AppCompatActivity() {
             val username = usernameInput.text.toString()
             val password = passwordInput.text.toString()
 
-            var intent = Intent(this@LoginPage, HomePageActivity::class.java)
+            val loginResult = dbHelper.checkUser(username, password)
 
 
-            if(dbHelper.checkUser(username, password)){
+            if(loginResult.first){
                 Toast.makeText(this, "Logged In Successfully!", Toast.LENGTH_SHORT).show()
+
+                val intent = if(loginResult.second){
+                    Intent(this@LoginPage, PickupStationsDriver::class.java)
+                }
+                else{
+                    Intent(this@LoginPage, HomePageActivity::class.java)
+                }
                 startActivity(intent)
                 finish()
             }
             else{
                 Toast.makeText(this, "Username or Password incorrect, please try again!", Toast.LENGTH_SHORT).show()
             }
-            Log.i("Test Credentials", "Username: $username and Password: $password")
         }
 
         signupButton.setOnClickListener {
