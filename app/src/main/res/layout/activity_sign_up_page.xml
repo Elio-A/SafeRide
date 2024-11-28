@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
@@ -7,15 +7,15 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
 
-    android:background="@color/saferide_orange"
+    android:background="@color/loginBG"
     tools:context=".sign_up_page">
 
     <ImageView
         android:id="@+id/login_image_logo"
-        android:layout_width="160dp"
-        android:layout_height="160dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="190dp"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="140dp"
         android:elevation="1dp"
         android:background="@drawable/account_icon_background"
         android:src="@drawable/account_logo"
@@ -24,8 +24,11 @@
 
     <RelativeLayout
         android:id="@+id/signup_input_space"
-        android:layout_width="match_parent"
+        android:layout_width="500dp"
         android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignTop="@+id/login_image_logo"
+        android:layout_marginTop="80dp"
         android:layout_gravity="center"
         android:padding="16dp"
         android:layout_marginLeft="16dp"
@@ -36,7 +39,7 @@
 
         <EditText
             android:id="@+id/signup_username"
-            android:layout_width="match_parent"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:hint="Student Number"
             android:inputType="number"
@@ -44,14 +47,14 @@
             android:textAlignment="center"
             android:background="@drawable/rectangle_button_background"
             android:padding="15dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="70dp"
             android:gravity="center"
             />
 
         <EditText
             android:id="@+id/signup_password"
-            android:layout_width="match_parent"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:hint="Password"
             android:inputType="textPassword"
@@ -61,13 +64,12 @@
             android:layout_below="@id/signup_username"
             android:padding="15dp"
             android:layout_marginTop="15dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
+            android:layout_centerHorizontal="true"
             />
 
         <EditText
             android:id="@+id/confirm_password"
-            android:layout_width="match_parent"
+            android:layout_width="350dp"
             android:layout_height="wrap_content"
             android:hint="Confirm Password"
             android:inputType="textPassword"
@@ -77,13 +79,12 @@
             android:layout_below="@id/signup_password"
             android:padding="15dp"
             android:layout_marginTop="15dp"
-            android:layout_marginLeft="15dp"
-            android:layout_marginRight="15dp"
+            android:layout_centerHorizontal="true"
             />
 
         <LinearLayout
             android:id="@+id/is_driver_container"
-            android:layout_width="wrap_content"
+            android:layout_width="200dp"
             android:layout_height="wrap_content"
             android:background="@drawable/rectangle_button_background"
             android:layout_below="@id/confirm_password"
@@ -96,6 +97,8 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="I am a driver"
+                android:textSize="18sp"
+                android:layout_marginStart="22dp"
                 android:textColor="@color/white"
                 />
 
@@ -103,16 +106,17 @@
 
         <Button
             android:id="@+id/signup_button"
-            android:layout_width="match_parent"
+            android:layout_width="150dp"
             android:layout_height="wrap_content"
             android:text="Sign Up"
-            android:backgroundTint="@color/blackberry"
             android:layout_below="@id/is_driver_container"
+            android:layout_marginTop="15dp"
+            android:backgroundTint="@color/dimgrey"
+            android:hint="Sign up"
+            android:textColorHint="@color/lightgrey"
+            android:layout_centerHorizontal="true"
             android:padding="15dp"
-            android:layout_marginTop="20dp"
-            android:layout_marginLeft="75dp"
-            android:layout_marginRight="75dp"
-            />
+            android:textSize="15sp" />
 
     </RelativeLayout>
-</LinearLayout>
+</RelativeLayout>

@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import MockData.*
+import android.app.AlertDialog
 import android.content.ContentValues.TAG
 import android.content.Intent
 import android.nfc.Tag
@@ -58,7 +59,7 @@ class LoginPage : AppCompatActivity() {
                 Toast.makeText(this, "Logged In Successfully!", Toast.LENGTH_SHORT).show()
 
                 val intent = if(loginResult.second){
-                    Intent(this@LoginPage, PickupStationsDriver::class.java)
+                    Intent(this@LoginPage, SafeRideCars::class.java)
                 }
                 else{
                     Intent(this@LoginPage, HomePageActivity::class.java)
@@ -74,7 +75,18 @@ class LoginPage : AppCompatActivity() {
         signupButton.setOnClickListener {
             intent = Intent(this@LoginPage, sign_up_page::class.java)
             startActivity(intent)
-            finish()
         }
+    }
+
+    override fun onBackPressed(){
+        AlertDialog.Builder(this)
+            .setTitle("Confirm Exit")
+            .setMessage("Are you sure you want to exit the app?")
+            .setPositiveButton("Yes") { _, _ ->
+                super.onBackPressed()
+                finishAffinity()
+            }
+            .setNegativeButton("No", null)
+            .show()
     }
 }//End LoginPage

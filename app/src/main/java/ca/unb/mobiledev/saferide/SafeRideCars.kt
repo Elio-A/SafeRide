@@ -1,5 +1,6 @@
 package ca.unb.mobiledev.saferide
 
+import android.app.AlertDialog
 import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageButton
@@ -43,5 +44,19 @@ class SafeRideCars : AppCompatActivity() {
             val intent = Intent(this@SafeRideCars, CarPhotos::class.java)
             startActivity(intent)
         }
+    }
+
+    override fun onBackPressed(){
+        AlertDialog.Builder(this)
+            .setTitle("Confirm Logout")
+            .setMessage("Are you sure you want to log out?")
+            .setPositiveButton("Yes") { _, _ ->
+                super.onBackPressed()
+                intent = Intent(this@SafeRideCars, LoginPage::class.java)
+                startActivity(intent)
+                finishAffinity()
+            }
+            .setNegativeButton("No", null)
+            .show()
     }
 }
