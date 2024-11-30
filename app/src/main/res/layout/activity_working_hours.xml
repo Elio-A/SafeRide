@@ -6,7 +6,7 @@
     style="@android:style/TextAppearance.DeviceDefault.Medium"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/home_activity_backgroud_dradient"
+    android:background="@drawable/home_activity_background_gradient"
 
     tools:context=".WorkingHours">
 
@@ -199,7 +199,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:fontFamily="sans-serif-black"
-                android:text="HEAD HALL"
+                android:text="CURRIE CENTER"
                 android:textColor="@color/white"
                 android:textSize="22sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -215,7 +215,8 @@
                 app:layout_constraintDimensionRatio="w,1:1"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
+                app:layout_constraintTop_toTopOf="parent"
+                android:layout_marginBottom="40dp">
 
                 <TextView
                     android:id="@+id/head_hours"

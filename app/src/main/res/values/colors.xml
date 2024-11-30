@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
+    <color name="black">#000000</color>
+    <color name="gray">#D01B1D1B</color>
     <color name="white">#FFFFFFFF</color>
     <color name="saferideOrange">#D65E3A</color>
 
@@ -17,9 +18,20 @@
     <color name="chargrey">#36454F</color>
 
     <color name="dimgrey">#696969</color>
-    <color name="purple">#BB86FC</color>
 
     <color name="red">#FF0000</color>
 
+    <color name="green">#00FF22</color>
+
+    <color name="bg">#C9FFFFFF</color>
+
     <color name="transparent">#00000000</color>
+
+    <color name="teal_bg">#008080</color>
+
+    <color name="peach_orange">#FEDBBC</color>
+    <color name="pumpkin">#FDB766</color>
+    <color name="orange_bg">#CE4B27</color>
+
+    <color name="loginBG">#979696</color>
 </resources>
