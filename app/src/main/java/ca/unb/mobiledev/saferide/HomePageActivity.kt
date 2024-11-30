@@ -41,6 +41,7 @@ class HomePageActivity : AppCompatActivity(){
         val qrCodeScanner : Button = findViewById(R.id.qr_code_button)
         val nextPickupButton: Button = findViewById(R.id.next_pickup_button)
         val newsButton: Button = findViewById(R.id.news_button)
+        val driverHomePage: Button = findViewById(R.id.driver_home_page)
 
         stationButton.setOnClickListener{
             val intent = Intent(this@HomePageActivity, stations::class.java)
@@ -74,6 +75,11 @@ class HomePageActivity : AppCompatActivity(){
 
         nextPickupButton.setOnClickListener {
             val intent = Intent(this@HomePageActivity, Next_Pickup::class.java)
+            startActivity(intent)
+        }
+
+        driverHomePage.setOnClickListener {
+            val intent = Intent(this@HomePageActivity, DriverHomePage::class.java)
             startActivity(intent)
         }
     }
