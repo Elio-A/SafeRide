@@ -5,7 +5,7 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="@drawable/home_activity_backgroud_dradient"
+    android:background="@drawable/home_activity_background_gradient"
     tools:context=".DriverHomePage">
 
     <ScrollView
@@ -52,7 +52,7 @@
                 android:backgroundTint="@color/dimgrey"
                 android:hint="@string/working_hours"
                 android:textSize="30sp"
-                android:textColorHint="@color/purple"
+                android:textColorHint="@color/white"
                 />
 
             <Button
@@ -64,7 +64,7 @@
                 android:backgroundTint="@color/dimgrey"
                 android:hint="@string/about_us"
                 android:textSize="30sp"
-                android:textColorHint="@color/purple"
+                android:textColorHint="@color/white"
                 />
 
             <Button
