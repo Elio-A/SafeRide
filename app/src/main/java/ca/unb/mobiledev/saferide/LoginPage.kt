@@ -1,26 +1,15 @@
 package ca.unb.mobiledev.saferide
 
+import android.app.AlertDialog
+import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
+import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
-import MockData.*
-import android.app.AlertDialog
-import android.content.ContentValues.TAG
-import android.content.Intent
-import android.nfc.Tag
-import android.widget.ListView
-import android.widget.Toast
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.ViewModelProvider
-import ca.unb.mobiledev.saferide.entity.User
-import ca.unb.mobiledev.saferide.viewmodels.UserViewModel
-import java.util.concurrent.Future
-import kotlin.math.sign
 
 class LoginPage : AppCompatActivity() {
 

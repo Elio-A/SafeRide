@@ -10,11 +10,6 @@ public class MockDataMain {
         if(Objects.equals(studentNumber, user1.getStudentNumber())){
             return true;
         }
-        else if(Objects.equals(studentNumber, user2.getStudentNumber())){
-            return true;
-        }
-        else {
-            return false;
-        }
+        else return Objects.equals(studentNumber, user2.getStudentNumber());
     }
 }

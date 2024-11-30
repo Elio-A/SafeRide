@@ -105,7 +105,7 @@ class HomePageActivity : AppCompatActivity(){
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        val result: IntentResult?= IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
+        val result: IntentResult = IntentIntegrator.parseActivityResult(requestCode, resultCode, data)
         if(result != null){
             if(result.contents == null){
                 Toast.makeText(this, "Scan Cancelled!", Toast.LENGTH_SHORT).show()
