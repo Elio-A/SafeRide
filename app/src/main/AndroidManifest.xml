@@ -27,6 +27,9 @@
             android:name=".DriverHome"
             android:exported="false" />
         <activity
+            android:name=".DriverHomePage"
+            android:exported="false" />
+        <activity
             android:name=".PickupStationsDriver"
             android:exported="false" />
         <activity

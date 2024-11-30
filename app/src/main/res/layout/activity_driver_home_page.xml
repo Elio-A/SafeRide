@@ -4,112 +4,31 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:background="@drawable/home_activity_background_gradient"
     tools:context=".DriverHomePage">
 
-    <ScrollView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal"
+        android:layout_centerInParent="true">
 
-        <LinearLayout
+        <ImageView
+            android:id="@+id/qr_code_image"
             android:layout_width="match_parent"
+            android:layout_height="500dp"
+            android:background="@color/transparent"
+            android:layout_marginBottom="32dp"/>
+
+        <Button
+            android:id="@+id/logout_button"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:gravity="center_horizontal"
-            >
-
-            <ImageView
-                android:id="@+id/qr_code_image"
-                android:layout_width="match_parent"
-                android:layout_height="284dp" />
-
-            <Button
-                android:id="@+id/pickup_stations_button"
-                android:layout_width="358dp"
-                android:layout_height="89dp"
-                android:layout_marginTop="16dp"
-                android:backgroundTint="@color/dimgrey"
-                android:hint="@string/pick_up_stations"
-                android:textColorHint="@color/saferide_orange"
-                android:textSize="30sp" />
-
-            <Button
-                android:id="@+id/radius_button"
-                android:layout_width="358dp"
-                android:layout_height="89dp"
-                android:backgroundTint="@color/dimgrey"
-                android:hint="@string/radius_home"
-                android:textColorHint="@color/saferide_orange"
-                android:textSize="30sp" />
-
-            <Button
-                android:id="@+id/working_hours_button"
-                android:layout_width="358dp"
-                android:layout_height="89dp"
-                android:layout_alignBottom="@+id/radius_button"
-                android:layout_centerHorizontal="true"
-                android:backgroundTint="@color/dimgrey"
-                android:hint="@string/working_hours"
-                android:textSize="30sp"
-                android:textColorHint="@color/white"
-                />
-
-            <Button
-                android:id="@+id/about_us_button"
-                android:layout_width="358dp"
-                android:layout_height="89dp"
-                android:layout_alignBottom="@+id/working_hours_button"
-                android:layout_centerHorizontal="true"
-                android:backgroundTint="@color/dimgrey"
-                android:hint="@string/about_us"
-                android:textSize="30sp"
-                android:textColorHint="@color/white"
-                />
-
-            <Button
-                android:id="@+id/news_button"
-                android:layout_width="358dp"
-                android:layout_height="89dp"
-                android:layout_alignBottom="@+id/about_us_button"
-                android:layout_centerHorizontal="true"
-                android:backgroundTint="@color/dimgrey"
-                android:hint="@string/news"
-                android:textSize="30sp"
-                android:textColorHint="@color/white"
-                />
-
-            <Button
-                android:id="@+id/qr_code_button"
-                android:layout_width="358dp"
-                android:layout_height="89dp"
-                android:layout_alignBottom="@+id/news_button"
-                android:layout_centerHorizontal="true"
-                android:backgroundTint="@color/dimgrey"
-                android:hint="@string/qr_code"
-                android:textSize="30sp"
-                android:textColorHint="@color/lightgrey"
-                />
-
-            <Button
-                android:id="@+id/driver_button"
-                android:layout_width="358dp"
-                android:layout_height="89dp"
-                android:layout_alignBottom="@+id/qr_code_button"
-                android:backgroundTint="@color/dimgrey"
-                android:hint="@string/driver_view"
-                android:textSize="30sp"
-                android:textColorHint="@color/lightgrey"/>
-
-            <Button
-                android:id="@+id/next_pickup_button"
-                android:layout_width="358dp"
-                android:layout_height="89dp"
-                android:layout_alignBottom="@+id/qr_code_button"
-                android:backgroundTint="@color/dimgrey"
-                android:hint="Next Pick-Up"
-                android:textSize="30sp"
-                android:textColorHint="@color/lightgrey"/>
-        </LinearLayout>
-    </ScrollView>
+            android:text="Log Out"
+            android:backgroundTint="@color/dimgrey"
+            android:textColor="@color/saferide_orange"
+            android:textSize="18sp"/>
+    </LinearLayout>
 </RelativeLayout>
