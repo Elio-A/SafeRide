@@ -17,7 +17,8 @@ class LoginPage : AppCompatActivity() {
     lateinit var passwordInput : EditText
     lateinit var loginButton : Button
     lateinit var signupButton : Button
-    private lateinit var dbHelper: DatabaseHelper
+    var studentID: Int = 0
+    private lateinit var dbHelper: UserDatabaseHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +36,7 @@ class LoginPage : AppCompatActivity() {
         loginButton = findViewById(R.id.login_button)
         signupButton = findViewById(R.id.signup_button)
 
-        dbHelper = DatabaseHelper(this)
+        dbHelper = UserDatabaseHelper(this)
 
         loginButton.setOnClickListener {
             val username = usernameInput.text.toString()
@@ -46,13 +47,13 @@ class LoginPage : AppCompatActivity() {
 
             if(loginResult.first){
                 Toast.makeText(this, "Logged In Successfully!", Toast.LENGTH_SHORT).show()
-
                 val intent = if(loginResult.second){
                     Intent(this@LoginPage, SafeRideCars::class.java)
                 }
                 else{
                     Intent(this@LoginPage, HomePageActivity::class.java)
                 }
+                intent.putExtra("KEY_ID", username)
                 startActivity(intent)
                 finish()
             }

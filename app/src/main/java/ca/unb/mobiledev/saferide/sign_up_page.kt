@@ -17,7 +17,7 @@ class sign_up_page : AppCompatActivity() {
     private lateinit var passwordEditText : EditText
     private lateinit var confirmPasswordEditText : EditText
     private lateinit var signupButton : Button
-    private lateinit var dbHelper: DatabaseHelper
+    private lateinit var dbHelper: UserDatabaseHelper
     private lateinit var isDriverCheckbox: CheckBox
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -34,7 +34,7 @@ class sign_up_page : AppCompatActivity() {
         passwordEditText = findViewById(R.id.signup_password)
         confirmPasswordEditText = findViewById(R.id.confirm_password)
         signupButton = findViewById(R.id.signup_button)
-        dbHelper = DatabaseHelper(this)
+        dbHelper = UserDatabaseHelper(this)
         isDriverCheckbox = findViewById(R.id.is_driver_checkbox)
 
         signupButton.setOnClickListener {

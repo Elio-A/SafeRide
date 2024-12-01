@@ -50,12 +50,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
         android:layout_gravity="center_horizontal"
         android:orientation="vertical"
         android:layout_marginTop="60dp">
 
 
         <TextView
+            android:layout_marginTop="20dp"
             android:id="@+id/addressTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -67,11 +69,34 @@
             android:id="@+id/AddressTextViewInput"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="40dp"
             android:hint="Address"
             android:textColor="@color/white"
             android:textColorHint="@color/loginBG"
             android:backgroundTint="@color/white"
             android:inputType="textPostalAddress"/>
+
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/select_station"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            />
+
+        <Spinner
+            android:id="@+id/dropdown"
+            android:layout_width="match_parent"
+            android:layout_height="40sp"
+            android:background="@drawable/dropdown"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="40dp"
+            android:drawableRight="@android:drawable/btn_dropdown"
+            android:entries="@array/spinner_items" />
 
         <Button
             android:id="@+id/Submit"
@@ -81,6 +106,8 @@
             android:layout_margin="20dp"
             android:backgroundTint="@color/saferide_orange"
             android:layout_gravity="center_horizontal"/>
+
+
 
     </LinearLayout>
 

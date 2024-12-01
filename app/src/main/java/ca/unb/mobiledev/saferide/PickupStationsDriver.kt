@@ -42,6 +42,7 @@ class PickupStationsDriver : AppCompatActivity() {
         val buttons = listOf(subButton, headHallButton, stuButton, currieButton)
 
         for(button in buttons){
+            val intent = Intent(this, DriverHome::class.java)
             button.setOnClickListener { view ->
                 when (view.id) {
                     R.id.imageButton -> {
@@ -64,9 +65,8 @@ class PickupStationsDriver : AppCompatActivity() {
                         Log.i(TAG, "Currie Option")
                     }
                 }
+                startActivity(intent)
             }
-            val intent = Intent(this, DriverHome::class.java)
-            startActivity(intent)
         }
     }
 }

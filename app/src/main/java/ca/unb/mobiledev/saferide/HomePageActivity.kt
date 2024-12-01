@@ -34,6 +34,12 @@ class HomePageActivity : AppCompatActivity(){
             insets
         }
 
+        val userID = intent.getStringExtra("KEY_ID")?: "No User"
+
+        if(userID == "No User"){
+            Toast.makeText(this, "User not found", Toast.LENGTH_SHORT).show()
+        }
+
         val stationButton : Button = findViewById(R.id.pickup_stations_button)
         val radiusButton : Button = findViewById(R.id.radius_button)
         val workingHourButton : Button = findViewById(R.id.working_hours_button)
@@ -86,6 +92,7 @@ class HomePageActivity : AppCompatActivity(){
 
         manualInput.setOnClickListener{
             val intent = Intent(this@HomePageActivity, ManualInput::class.java)
+            intent.putExtra("KEY_ID", userID)
             startActivity(intent)
         }
     }

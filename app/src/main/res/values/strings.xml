@@ -45,4 +45,13 @@
     <string name="manual_input">Manual Input</string>
     <string name="address">Address</string>
     <string name="enter_your_address">Enter Your Address</string>
+    <string name="select_station">Select Station</string>
+    <string-array name="spinner_items">
+        <item>Select Station</item>
+        <item>Sir James Dunn Hall</item>
+        <item>SUB</item>
+        <item>Richarch Currie Center</item>
+        <item>IUC Building</item>
+    </string-array>
+
 </resources>
