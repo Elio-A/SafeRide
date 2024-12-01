@@ -42,4 +42,7 @@
     <string name="stu">STU</string>
     <string name="select_pick_up_station">Select Pick Up Station</string>
     <string name="driver_view">Driver View</string>
+    <string name="manual_input">Manual Input</string>
+    <string name="address">Address</string>
+    <string name="enter_your_address">Enter Your Address</string>
 </resources>

@@ -55,8 +55,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-    implementation (libs.zxing)
-    implementation (libs.zxing.core)
-    implementation("androidx.room:room-runtime:2.5.0")
-    implementation("androidx.room:room-ktx:2.5.0")
+    implementation(libs.core.v351)
+    implementation(libs.zxing)
+    implementation(libs.androidx.room.runtime)
+    implementation(libs.androidx.room.ktx.v250)
 }

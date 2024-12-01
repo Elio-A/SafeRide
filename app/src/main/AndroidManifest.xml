@@ -7,7 +7,6 @@
         android:required="true" />
 
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
@@ -20,6 +19,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SafeRide"
         tools:targetApi="31">
+        <activity
+            android:name=".ManualInput"
+            android:exported="false" />
         <activity
             android:name=".sign_up_page"
             android:exported="false" />
@@ -35,10 +37,9 @@
         <activity
             android:name=".CarPhotos"
             android:exported="false" />
-
         <activity
             android:name=".Next_Pickup"
-            android:exported="false"/>
+            android:exported="false" />
         <activity
             android:name=".SafeRideCars"
             android:exported="false" />
