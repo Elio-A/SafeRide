@@ -30,7 +30,6 @@ class DriverHomePage : AppCompatActivity() {
         val logoutButton: Button = findViewById(R.id.logout_button)
 
         startRideButton.setOnClickListener {
-            intent = Intent(this@DriverHomePage, StartRide::class.java)
             startActivity(intent)
             //finish()
         }
