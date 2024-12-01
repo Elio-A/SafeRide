@@ -10,6 +10,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 
 import android.graphics.Bitmap
+import android.net.Uri
 import android.widget.Button
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.qrcode.QRCodeWriter
@@ -30,6 +31,8 @@ class DriverHomePage : AppCompatActivity() {
         val logoutButton: Button = findViewById(R.id.logout_button)
 
         startRideButton.setOnClickListener {
+            val url = "https://docs.google.com/spreadsheets/d/1ae3b6AuH69pd1oersQY1albMSt4Dsgt8x3yZX288WZk/edit?usp=sharing"
+            val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
             startActivity(intent)
             //finish()
         }

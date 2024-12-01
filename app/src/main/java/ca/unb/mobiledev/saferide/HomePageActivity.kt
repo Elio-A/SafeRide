@@ -39,6 +39,7 @@ class HomePageActivity : AppCompatActivity(){
         val workingHourButton : Button = findViewById(R.id.working_hours_button)
         val aboutUsButton : Button = findViewById(R.id.about_us_button)
         val qrCodeScanner : Button = findViewById(R.id.qr_code_button)
+        val miButton: Button = findViewById(R.id.mi_button)
         val nextPickupButton: Button = findViewById(R.id.next_pickup_button)
         val newsButton: Button = findViewById(R.id.news_button)
         val driverHomePage: Button = findViewById(R.id.driver_home_page)
@@ -65,6 +66,12 @@ class HomePageActivity : AppCompatActivity(){
 
         qrCodeScanner.setOnClickListener{
             requestCameraPermission()
+        }
+
+        miButton.setOnClickListener {
+            val url = "https://docs.google.com/spreadsheets/d/1ae3b6AuH69pd1oersQY1albMSt4Dsgt8x3yZX288WZk/edit?usp=sharing"
+            intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+            startActivity(intent)
         }
 
         newsButton.setOnClickListener{
