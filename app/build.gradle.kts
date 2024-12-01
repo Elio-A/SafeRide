@@ -59,4 +59,7 @@ dependencies {
     implementation(libs.zxing)
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx.v250)
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+    implementation("com.google.apis:google-api-services-sheets:v4-rev20210629-1.32.1")
 }

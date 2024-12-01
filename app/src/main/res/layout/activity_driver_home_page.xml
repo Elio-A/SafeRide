@@ -23,6 +23,15 @@
             android:layout_marginBottom="32dp"/>
 
         <Button
+            android:id="@+id/start_ride_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Start Ride"
+            android:backgroundTint="@color/dimgrey"
+            android:textColor="@color/saferide_orange"
+            android:textSize="18sp"/>
+
+        <Button
             android:id="@+id/logout_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
