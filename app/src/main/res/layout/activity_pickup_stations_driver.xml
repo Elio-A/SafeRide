@@ -81,59 +81,36 @@
             app:layout_constraintTop_toBottomOf="@+id/relativeLayout">
 
 
-            <TextView
-                android:id="@+id/TextViewSUB"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="30dp"
-                android:text="@string/student_union_building"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
-
             <ImageButton
                 android:id="@+id/imageButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/TextViewSUB"
                 android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
+                android:layout_marginTop="30dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:contentDescription="@string/subbutton"
-                android:src="@drawable/gsalogo" />
+                android:src="@drawable/pickup_3" />
 
             <TextView
-                android:id="@+id/textViewHeadHall"
+                android:id="@+id/TextViewSUB"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/imageButton"
+                android:layout_below="@id/imageButton"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
-                android:text="@string/head_hall"
+                android:text="@string/student_union_building"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
-
-            <ImageButton
-                android:id="@+id/imageButton2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textViewHeadHall"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
-                android:background="?attr/selectableItemBackgroundBorderless"
-                android:contentDescription="@string/headhallimagebutton"
-                android:src="@drawable/gsalogo" />
 
 
             <TextView
                 android:id="@+id/textViewSTU"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/imageButton2"
+                android:layout_below="@+id/STUImageButton"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
-                android:text="@string/stu"
+                android:text="Sir James Dunn Hall (STU)"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -142,37 +119,36 @@
                 android:id="@+id/STUImageButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textViewSTU"
+                android:layout_below="@+id/TextViewSUB"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:contentDescription="@string/stu_button"
-                android:src="@drawable/gsalogo" />
-
-
-            <TextView
-                android:id="@+id/textView12"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/STUImageButton"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="20dp"
-                android:text="@string/richard_currie_center"
-                android:textColor="@color/white"
-                android:textSize="20sp" />
-
+                android:src="@drawable/pickup_1" />
 
             <ImageButton
                 android:id="@+id/CurrieButton"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/textView12"
+                android:layout_below="@+id/textViewSTU"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:contentDescription="@string/curriebutton"
-                android:src="@drawable/gsalogo" />
+                android:src="@drawable/pickup_2"
+                />
 
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/CurrieButton"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="Science Library (I.U.C)"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_marginBottom="50dp"/>
 
         </RelativeLayout>
 

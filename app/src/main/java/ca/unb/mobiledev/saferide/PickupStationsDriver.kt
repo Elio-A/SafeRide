@@ -35,11 +35,10 @@ class PickupStationsDriver : AppCompatActivity() {
         }
 
         val subButton: ImageButton = findViewById(R.id.imageButton)
-        val headHallButton: ImageButton = findViewById(R.id.imageButton2)
         val stuButton: ImageButton = findViewById(R.id.STUImageButton)
         val currieButton: ImageButton = findViewById(R.id.CurrieButton)
 
-        val buttons = listOf(subButton, headHallButton, stuButton, currieButton)
+        val buttons = listOf(subButton, stuButton, currieButton)
 
         for(button in buttons){
             button.setOnClickListener { view ->
@@ -47,11 +46,6 @@ class PickupStationsDriver : AppCompatActivity() {
                     R.id.imageButton -> {
                         //save sub option
                         Log.i(TAG, "SUB option")
-                    }
-
-                    R.id.imageButton2 -> {
-                        //save head hall button
-                        Log.i(TAG, "Head hall Option")
                     }
 
                     R.id.STUImageButton -> {
