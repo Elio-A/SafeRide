@@ -11,8 +11,9 @@ import androidx.core.view.WindowInsetsCompat
 
 import android.graphics.Bitmap
 import android.net.Uri
+import android.util.Log
 import android.widget.Button
-import ca.unb.mobiledev.saferide.DatabaseHelpers.LocationHelper
+import android.widget.Toast
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.qrcode.QRCodeWriter
 
@@ -40,6 +41,7 @@ class DriverHomePage : AppCompatActivity() {
         val startRideButton: Button = findViewById(R.id.start_ride_button)
         val logoutButton: Button = findViewById(R.id.logout_button)
         val retrieveButton: Button = findViewById(R.id.retrieveButton)
+        val mapButton: Button = findViewById(R.id.mapButton)
 
         startRideButton.setOnClickListener {
             val url = "https://docs.google.com/spreadsheets/d/1ae3b6AuH69pd1oersQY1albMSt4Dsgt8x3yZX288WZk/edit?usp=sharing"
@@ -67,6 +69,24 @@ class DriverHomePage : AppCompatActivity() {
             intent.putExtra("KEY_STATION", station)
             intent.putExtra("KEY_VEHICLE", vehicle)
             startActivity(intent)
+        }
+
+        mapButton.setOnClickListener {
+            val gmmIntentUri = Uri.parse("geo:45.9636,-66.6431")
+            val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
+
+            if (mapIntent.resolveActivity(packageManager) != null) {
+                startActivity(mapIntent)
+            } else {
+                val playStoreUri = Uri.parse("market://details?id=com.google.android.apps.maps")
+                val playStoreIntent = Intent(Intent.ACTION_VIEW, playStoreUri)
+
+                if (playStoreIntent.resolveActivity(packageManager) != null) {
+                    startActivity(playStoreIntent)
+                } else {
+                    Toast.makeText(this, "Google Maps is not installed, and Play Store is unavailable.", Toast.LENGTH_SHORT).show()
+                }
+            }
         }
 
         val content = "https://docs.google.com/spreadsheets/d/1ae3b6AuH69pd1oersQY1albMSt4Dsgt8x3yZX288WZk/edit?usp=sharing"

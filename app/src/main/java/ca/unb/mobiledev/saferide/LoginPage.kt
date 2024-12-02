@@ -17,7 +17,6 @@ class LoginPage : AppCompatActivity() {
     lateinit var passwordInput : EditText
     lateinit var loginButton : Button
     lateinit var signupButton : Button
-    var studentID: Int = 0
     private lateinit var dbHelper: UserDatabaseHelper
 
     override fun onCreate(savedInstanceState: Bundle?) {

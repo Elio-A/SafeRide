@@ -33,11 +33,11 @@ class PickupStationsDriver : AppCompatActivity() {
             finish()
         }
 
-        val subButton: ImageButton = findViewById(R.id.imageButton)
+        val subButton: ImageButton = findViewById(R.id.imageButtonSUB)
         val stuButton: ImageButton = findViewById(R.id.STUImageButton)
-        val currieButton: ImageButton = findViewById(R.id.CurrieButton)
+        val iucButton: ImageButton = findViewById(R.id.IUCButton)
 
-        val buttons = listOf(subButton, stuButton, currieButton)
+        val buttons = listOf(subButton, stuButton, iucButton)
 
         for(button in buttons){
             val intent = Intent(this, DriverHomePage::class.java)
@@ -50,13 +50,13 @@ class PickupStationsDriver : AppCompatActivity() {
 
             button.setOnClickListener { view ->
                 when (view.id) {
-                    R.id.imageButton -> {
+                    R.id.imageButtonSUB -> {
                         //save sub option
                         intent.putExtra("KEY_STATION", "SUB")
                         Log.i(TAG, "SUB option")
                     }
 
-                    R.id.imageButton2 -> {
+                    R.id.IUCButton -> {
                         //save head hall button
                         intent.putExtra("KEY_STATION", "head hall")
                         Log.i(TAG, "IUC Option")
@@ -66,12 +66,6 @@ class PickupStationsDriver : AppCompatActivity() {
                         //save stu option
                         intent.putExtra("KEY_STATION", "Sir James Dunn Hall")
                         Log.i(TAG, "STU option")
-                    }
-
-                    R.id.CurrieButton -> {
-                        //save currie option
-                        intent.putExtra("KEY_STATION", "Richard Currie Center")
-                        Log.i(TAG, "Currie Option")
                     }
                 }
                 startActivity(intent)

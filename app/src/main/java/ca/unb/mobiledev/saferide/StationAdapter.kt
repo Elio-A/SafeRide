@@ -1,4 +1,4 @@
-package ca.unb.mobiledev.saferide.data
+package ca.unb.mobiledev.saferide
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

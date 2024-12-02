@@ -50,12 +50,14 @@
     <string name="iuc_building">IUC Building</string>
     <string name="sir_james_dunn_hall_stu">Sir James Dunn Hall (STU)</string>
     <string name="completed">Complete Trip</string>
+    <string name="iucbutton">IUCButton</string>
+    <string name="science_library_i_u_c">Science Library (I.U.C)</string>
+    <string name="continue_next">Continue</string>
     <string-array name="spinner_items">
         <item>Select Station</item>
+        <item>Student Union Building</item>
+        <item>Science Building (I.U.C)</item>
         <item>Sir James Dunn Hall</item>
-        <item>SUB</item>
-        <item>Richard Currie Center</item>
-        <item>IUC Building</item>
     </string-array>
 
 </resources>

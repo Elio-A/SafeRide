@@ -46,21 +46,6 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/nextCarButton"
-            android:layout_width="50dp"
-            android:layout_height="match_parent"
-            android:layout_alignParentEnd="true"
-            android:layout_marginEnd="0dp"
-            android:background="@color/transparent"
-            android:enabled="true"
-            android:text="@string/button"
-            app:icon="?attr/homeAsUpIndicator"
-            app:iconSize="30dp"
-            app:iconTint="#000000"
-            android:scaleX="-1"
-            />
-
     </RelativeLayout>
 
     <ScrollView
@@ -241,7 +226,20 @@
                     android:visibility="gone"
                     android:scaleType="centerCrop"
                     />
+
             </FrameLayout>
+
+            <Button
+                android:id="@+id/nextCarButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_below="@id/LeftPicture"
+                android:layout_marginTop="30dp"
+                android:layout_centerHorizontal="true"
+                android:backgroundTint="@color/saferide_orange"
+                android:enabled="true"
+                android:layout_marginBottom="30dp"
+                android:text="@string/continue_next" />
 
         </RelativeLayout>
     </ScrollView>
