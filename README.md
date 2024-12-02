@@ -12,10 +12,11 @@ This is an Android application designed for UNB's CS2063 Course.  More specifica
 ## Features
 
 - Feature 1: The application makes use of various SQLite functionality to store, and retrieve information about users. (Login & Signup are an example of this feature)
-- Feature 2:
+- Feature 2: Users can input their next destination, selecting which station. Driver will then retrieve their next passengers from the database and see their destinations
 - Feature 3: On the passenger side, the application is able to open a QR code scanner.
 - Feature 4: On the driver side, the application generates a QR code that is to be scanned by the passengers
-- Feature 5: 
+- Feature 5: Users have all information about what is SafeRide and how to access it, including stations, working hours and radius
+- Feature 6: Users can see the status of stations and their vehicles. They can see if the driver is at the station, or is on a trip, and if so, they can see an estimate of how long they would need
 
 ## Installation
 
@@ -53,5 +54,5 @@ Here are a few instructions that can guide you through using our application:
 Here are the emails of all three contributors to this project:
 
 1. kalhindi@unb.ca
-2. 
-3. 
+2. ealalam@unb.ca
+3. akoesoema@unb.ca
