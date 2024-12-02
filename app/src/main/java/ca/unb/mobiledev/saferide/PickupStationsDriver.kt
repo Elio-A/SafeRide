@@ -2,7 +2,6 @@ package ca.unb.mobiledev.saferide
 
 import android.content.ContentValues.TAG
 import android.content.Intent
-import android.graphics.Bitmap
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
@@ -35,11 +34,10 @@ class PickupStationsDriver : AppCompatActivity() {
         }
 
         val subButton: ImageButton = findViewById(R.id.imageButton)
-        val headHallButton: ImageButton = findViewById(R.id.imageButton2)
         val stuButton: ImageButton = findViewById(R.id.STUImageButton)
         val currieButton: ImageButton = findViewById(R.id.CurrieButton)
 
-        val buttons = listOf(subButton, headHallButton, stuButton, currieButton)
+        val buttons = listOf(subButton, stuButton, currieButton)
 
         for(button in buttons){
             val intent = Intent(this, DriverHomePage::class.java)
