@@ -26,16 +26,19 @@ class SafeRideCars : AppCompatActivity() {
 
         firstCar.setOnClickListener{
             val intent = Intent(this@SafeRideCars, CarPhotos::class.java)
+            intent.putExtra("KEY_VEHICLE", "firstCar")
             startActivity(intent)
         }
 
         secondCar.setOnClickListener{
             val intent = Intent(this@SafeRideCars, CarPhotos::class.java)
+            intent.putExtra("KEY_VEHICLE", "secondCar")
             startActivity(intent)
         }
 
         thirdCar.setOnClickListener{
             val intent = Intent(this@SafeRideCars, CarPhotos::class.java)
+            intent.putExtra("KEY_VEHICLE", "thirdCar")
             startActivity(intent)
         }
     }

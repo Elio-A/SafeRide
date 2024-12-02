@@ -48,7 +48,6 @@ class HomePageActivity : AppCompatActivity(){
         val miButton: Button = findViewById(R.id.mi_button)
         val nextPickupButton: Button = findViewById(R.id.next_pickup_button)
         val newsButton: Button = findViewById(R.id.news_button)
-        val driverHomePage: Button = findViewById(R.id.driver_home_page)
         val manualInput: Button = findViewById(R.id.manual_input)
 
         stationButton.setOnClickListener{
@@ -89,11 +88,6 @@ class HomePageActivity : AppCompatActivity(){
 
         nextPickupButton.setOnClickListener {
             val intent = Intent(this@HomePageActivity, Next_Pickup::class.java)
-            startActivity(intent)
-        }
-
-        driverHomePage.setOnClickListener {
-            val intent = Intent(this@HomePageActivity, DriverHomePage::class.java)
             startActivity(intent)
         }
 

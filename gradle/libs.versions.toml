@@ -1,6 +1,7 @@
 [versions]
 agp = "8.5.2"
 core = "3.5.1"
+googleApiServicesSheets = "v4-rev20210629-1.32.1"
 kotlin = "1.9.0"
 coreKtx = "1.13.1"
 junit = "4.13.2"
@@ -14,6 +15,7 @@ legacySupportV4 = "1.0.0"
 annotation = "1.8.2"
 lifecycleLivedataKtx = "2.8.6"
 lifecycleViewmodelKtx = "2.8.6"
+retrofit = "2.9.0"
 roomCommon = "2.6.1"
 roomKtx = "2.6.1"
 roomKtxVersion = "2.5.0"
@@ -22,7 +24,9 @@ roomKtxVersion = "2.5.0"
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-room-ktx-v250 = { module = "androidx.room:room-ktx", version.ref = "roomKtxVersion" }
 androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "roomCommon" }
+converter-gson = { module = "com.squareup.retrofit2:converter-gson", version.ref = "retrofit" }
 core-v351 = { module = "com.google.zxing:core", version.ref = "core" }
+google-api-services-sheets = { module = "com.google.apis:google-api-services-sheets", version.ref = "googleApiServicesSheets" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }
@@ -34,6 +38,7 @@ androidx-legacy-support-v4 = { group = "androidx.legacy", name = "legacy-support
 androidx-annotation = { group = "androidx.annotation", name = "annotation", version.ref = "annotation" }
 androidx-lifecycle-livedata-ktx = { group = "androidx.lifecycle", name = "lifecycle-livedata-ktx", version.ref = "lifecycleLivedataKtx" }
 androidx-lifecycle-viewmodel-ktx = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-ktx", version.ref = "lifecycleViewmodelKtx" }
+retrofit = { module = "com.squareup.retrofit2:retrofit", version.ref = "retrofit" }
 zxing = {group = "com.journeyapps", name = "zxing-android-embedded", version = "4.3.0"}
 zxing-core = {group = "com.google.zxing", name = "core", version = "3.4.1"}
 androidx-room-common = { group = "androidx.room", name = "room-common", version.ref = "roomCommon" }

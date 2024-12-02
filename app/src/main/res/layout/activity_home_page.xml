@@ -98,15 +98,6 @@
                 android:textColorHint="@color/lightgrey"/>
 
             <Button
-                android:id="@+id/driver_home_page"
-                android:layout_width="358dp"
-                android:layout_height="89dp"
-                android:backgroundTint="@color/dimgrey"
-                android:hint="Driver Home Page"
-                android:textSize="30sp"
-                android:textColorHint="@color/lightgrey"/>
-
-            <Button
                 android:id="@+id/manual_input"
                 android:layout_width="358dp"
                 android:layout_height="89dp"

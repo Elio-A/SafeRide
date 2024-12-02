@@ -110,7 +110,7 @@
                 android:layout_below="@+id/imageButton"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
-                android:text="@string/head_hall"
+                android:text="@string/iuc_building"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 
@@ -133,7 +133,7 @@
                 android:layout_below="@+id/imageButton2"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="20dp"
-                android:text="@string/stu"
+                android:text="@string/sir_james_dunn_hall_stu"
                 android:textColor="@color/white"
                 android:textSize="20sp" />
 

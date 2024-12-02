@@ -12,10 +12,12 @@ import androidx.core.view.WindowInsetsCompat
 import android.graphics.Bitmap
 import android.net.Uri
 import android.widget.Button
+import ca.unb.mobiledev.saferide.DatabaseHelpers.LocationHelper
 import com.google.zxing.BarcodeFormat
 import com.google.zxing.qrcode.QRCodeWriter
 
 class DriverHomePage : AppCompatActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -26,9 +28,18 @@ class DriverHomePage : AppCompatActivity() {
             insets
         }
 
+//        val frontImage: Bitmap? = intent.getParcelableExtra("KEY_FRONT_IMAGE")
+//        val rightImage: Bitmap? = intent.getParcelableExtra("KEY_RIGHT_IMAGE")
+//        val backImage: Bitmap? = intent.getParcelableExtra("KEY_BACK_IMAGE")
+//        val leftImage: Bitmap? = intent.getParcelableExtra("KEY_LEFT_IMAGE")
+        val vehicle = intent.getStringExtra("KEY_VEHICLE")?: "UNKNOWN VEHICLE"
+        val station = intent.getStringExtra("KEY_STATION")?: "UNKNOWN STATION"
+
+
         val qrCodeImageView: ImageView = findViewById(R.id.qr_code_image)
         val startRideButton: Button = findViewById(R.id.start_ride_button)
         val logoutButton: Button = findViewById(R.id.logout_button)
+        val retrieveButton: Button = findViewById(R.id.retrieveButton)
 
         startRideButton.setOnClickListener {
             val url = "https://docs.google.com/spreadsheets/d/1ae3b6AuH69pd1oersQY1albMSt4Dsgt8x3yZX288WZk/edit?usp=sharing"
@@ -49,6 +60,13 @@ class DriverHomePage : AppCompatActivity() {
                 }
                 .setNegativeButton("No", null)
                 .show()
+        }
+
+        retrieveButton.setOnClickListener {
+            intent = Intent(this@DriverHomePage, NextTrip::class.java)
+            intent.putExtra("KEY_STATION", station)
+            intent.putExtra("KEY_VEHICLE", vehicle)
+            startActivity(intent)
         }
 
         val content = "https://docs.google.com/spreadsheets/d/1ae3b6AuH69pd1oersQY1albMSt4Dsgt8x3yZX288WZk/edit?usp=sharing"

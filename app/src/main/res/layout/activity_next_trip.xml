@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/home_activity_background_gradient"
-    tools:context=".ManualInput">
+    tools:context=".NextTrip">
 
     <RelativeLayout
         android:id="@+id/relativeLayout"
@@ -48,67 +48,37 @@
     </RelativeLayout>
 
     <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginStart="20dp"
-        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="60dp"
         android:orientation="vertical"
-        android:layout_marginTop="60dp">
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
 
 
         <TextView
-            android:layout_marginTop="20dp"
-            android:id="@+id/addressTextView"
+            android:id="@+id/locationsTextView"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/enter_your_address"
+            android:padding="16dp"
+            android:text="@string/upcoming_locations_will_be_shown_here"
             android:textColor="@color/white"
-            android:textSize="30sp" />
-
-        <EditText
-            android:id="@+id/AddressTextViewInput"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="40dp"
-            android:hint="Address"
-            android:textColor="@color/white"
-            android:textColorHint="@color/loginBG"
-            android:backgroundTint="@color/white"
-            android:inputType="textPostalAddress"/>
-
-        <TextView
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="@string/select_station"
-            android:textColor="@color/white"
-            android:textSize="30sp"
-            />
-
-        <Spinner
-            android:id="@+id/dropdown"
-            android:layout_width="match_parent"
-            android:layout_height="40sp"
-            android:background="@drawable/dropdown"
-            android:layout_marginTop="10dp"
-            android:layout_marginStart="20dp"
-            android:layout_marginEnd="40dp"
-            android:drawableRight="@android:drawable/btn_dropdown"
-            android:entries="@array/spinner_items" />
+            android:textSize="20sp" />
 
         <Button
-            android:id="@+id/Submit"
+            android:id="@+id/comepleteButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Submit"
             android:layout_margin="20dp"
             android:backgroundTint="@color/saferide_orange"
-            android:layout_gravity="center_horizontal"/>
-
+            android:layout_gravity="center_horizontal"
+            android:text="@string/completed" />
 
 
     </LinearLayout>
-
 </androidx.constraintlayout.widget.ConstraintLayout>

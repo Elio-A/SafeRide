@@ -21,13 +21,13 @@
         android:theme="@style/Theme.SafeRide"
         tools:targetApi="31">
         <activity
+            android:name=".NextTrip"
+            android:exported="false" />
+        <activity
             android:name=".ManualInput"
             android:exported="false" />
         <activity
             android:name=".sign_up_page"
-            android:exported="false" />
-        <activity
-            android:name=".DriverHome"
             android:exported="false" />
         <activity
             android:name=".DriverHomePage"

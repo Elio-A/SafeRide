@@ -32,6 +32,17 @@
             android:textSize="18sp"/>
 
         <Button
+            android:id="@+id/retrieveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Retrieve Next Trip"
+            android:backgroundTint="@color/dimgrey"
+            android:textColor="@color/saferide_orange"
+            android:textSize="18sp"
+            />
+
+
+        <Button
             android:id="@+id/logout_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

@@ -5,6 +5,7 @@ import android.content.ContentValues.TAG
 import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.graphics.drawable.BitmapDrawable
 import android.media.Image
 import android.net.Uri
 import android.os.Build
@@ -54,10 +55,25 @@ class CarPhotos : AppCompatActivity() {
             insets
         }
 
+        val vehicle = intent.getStringExtra("KEY_VEHICLE")?: "UNKNOWN"
+
         val nextButton: Button = findViewById(R.id.nextCarButton)
         nextButton.setOnClickListener {
             if(frontImagePosted && rightImagePosted && backImagePosted && leftImagePosted) {
                 val intent = Intent(this, PickupStationsDriver::class.java)
+                // Assuming these are your Bitmaps
+//                val frontBitmap = (frontImageView.drawable as BitmapDrawable).bitmap
+//                val rightBitmap = (rightImageView.drawable as BitmapDrawable).bitmap
+//                val backBitmap = (backImageView.drawable as BitmapDrawable).bitmap
+//                val leftBitmap = (leftImageView.drawable as BitmapDrawable).bitmap
+
+                    // Put the Bitmaps as extras
+//                intent.putExtra("KEY_FRONT_IMAGE", frontBitmap)
+//                intent.putExtra("KEY_RIGHT_IMAGE", rightBitmap)
+//                intent.putExtra("KEY_BACK_IMAGE", backBitmap)
+//                intent.putExtra("KEY_LEFT_IMAGE", leftBitmap)
+
+                intent.putExtra("KEY_VEHICLE", vehicle)
                 startActivity(intent)
             } else {
                 Log.i(TAG, "Enter a Photo for each view")

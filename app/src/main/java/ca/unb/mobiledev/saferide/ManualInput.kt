@@ -60,7 +60,12 @@ class ManualInput : AppCompatActivity() {
             if(selectedItem == "Select Station"){
                 Toast.makeText(this, "Please select a valid station", Toast.LENGTH_SHORT).show()
             } else {
-                val result = dbHelper.addLocation(userID, addressInput, selectedItem)
+                val result = dbHelper.addLocation(userID, selectedItem, addressInput)
+                if (result == -1L) {
+                    Toast.makeText(this, "Failed to add location", Toast.LENGTH_SHORT).show()
+                } else {
+                    Toast.makeText(this, "Location added", Toast.LENGTH_SHORT).show()
+                }
             }
             //Log.i(TAG, "Input: $selectedItem")
 
