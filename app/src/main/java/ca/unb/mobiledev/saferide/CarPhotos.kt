@@ -60,7 +60,7 @@ class CarPhotos : AppCompatActivity() {
                 val intent = Intent(this, PickupStationsDriver::class.java)
                 startActivity(intent)
             } else {
-                Log.i(TAG, "Enter a Photo for each view")
+                Toast.makeText(this, "You must upload ALL FOUR photos before proceeding!", Toast.LENGTH_SHORT).show()
             }
         }
 
