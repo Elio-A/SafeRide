@@ -35,6 +35,15 @@
                 android:textColorHint="@color/lightgrey"/>
 
             <Button
+                android:id="@+id/manual_input"
+                android:layout_width="358dp"
+                android:layout_height="89dp"
+                android:backgroundTint="@color/dimgrey"
+                android:hint="Pickup Request"
+                android:textSize="30sp"
+                android:textColorHint="@color/lightgrey"/>
+
+            <Button
                 android:id="@+id/pickup_stations_button"
                 android:layout_width="358dp"
                 android:layout_height="89dp"
@@ -69,15 +78,6 @@
                 android:hint="@string/qr_code"
                 android:textSize="30sp"
                 android:textColorHint="@color/lightgrey" />
-
-            <Button
-                android:id="@+id/manual_input"
-                android:layout_width="358dp"
-                android:layout_height="89dp"
-                android:backgroundTint="@color/dimgrey"
-                android:hint="Pickup Request"
-                android:textSize="30sp"
-                android:textColorHint="@color/lightgrey"/>
 
             <Button
                 android:id="@+id/news_button"
