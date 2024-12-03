@@ -175,7 +175,7 @@
                 android:layout_below="@+id/textView8"
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="50dp"
-                android:backgroundTint="@color/saferideOrange"
+                android:backgroundTint="@color/dimgrey"
                 android:fontFamily="sans-serif-black"
                 android:text="Message Us" />
 

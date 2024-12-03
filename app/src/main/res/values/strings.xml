@@ -53,6 +53,8 @@
     <string name="iucbutton">IUCButton</string>
     <string name="science_library_i_u_c">Science Library (I.U.C)</string>
     <string name="continue_next">Continue</string>
+    <string name="map_view">Map View:</string>
+    <string name="street_view">Street View:</string>
     <string-array name="spinner_items">
         <item>Select Station</item>
         <item>Student Union Building</item>

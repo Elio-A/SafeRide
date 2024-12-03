@@ -47,6 +47,16 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <TextView
+                android:id="@+id/mapView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:text="@string/map_view"
+                android:textColor="@color/lightgrey"
+                android:textSize="30sp" />
+
             <ImageView
                 android:id="@+id/stations_map_image"
                 android:layout_width="match_parent"
@@ -54,52 +64,82 @@
                 android:src="@drawable/stations_map" />
 
             <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text="You can find four pickup stations on campus. Three of which are currently in action and one that is coming soon."
-                android:textColor="@color/white"
-                android:textSize="20sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text=" - The first pickup station is located at Headhall's main entrance."
-                android:textColor="@color/white"
-                android:textSize="18sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text=" - The second pickup station is located at the Richard J Currie Center's main entrance."
-                android:textColor="@color/white"
-                android:textSize="18sp" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text=" - The third pickup station is located at the Student Union Building's top entrance."
-                android:textColor="@color/white"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/drop_down_button_1"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="10dp"
-                android:text=" - The fourth and last pickup station will be located in Saint Thomas University's parking lot."
-                android:textColor="@color/white"
-                android:textSize="18sp" />
-
-            <ImageView
-                android:id="@+id/drop_down_image_1"
+                android:id="@+id/streetView"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:src="@drawable/stations_map"
-                android:visibility="gone" />
+                android:layout_marginTop="20dp"
+                android:layout_gravity="center"
+                android:text="@string/street_view"
+                android:textColor="@color/lightgrey"
+                android:textSize="30sp" />
+
+
+            <ImageView
+                android:id="@+id/imageButtonSUB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/subbutton"
+                android:src="@drawable/pickup_3" />
+
+
+            <TextView
+                android:id="@+id/TextViewSUB"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:text="@string/student_union_building"
+                android:textColor="@color/lightgrey"
+                android:textSize="20sp" />
+
+
+            <ImageView
+                android:id="@+id/IUCButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/iucbutton"
+                android:src="@drawable/pickup_2"
+                />
+
+
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:text="@string/science_library_i_u_c"
+                android:textColor="@color/lightgrey"
+                android:textSize="20sp" />
+
+
+            <ImageView
+                android:id="@+id/STUImageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:contentDescription="@string/stu_button"
+                android:src="@drawable/pickup_1" />
+
+
+            <TextView
+                android:id="@+id/textViewSTU"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_gravity="center"
+                android:text="Sir James Dunn Hall (STU)"
+                android:textColor="@color/lightgrey"
+                android:layout_marginBottom="20dp"
+                android:textSize="20sp" />
         </LinearLayout>
 
     </ScrollView>
