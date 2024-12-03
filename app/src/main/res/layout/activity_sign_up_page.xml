@@ -112,6 +112,7 @@
             android:layout_below="@id/is_driver_container"
             android:layout_marginTop="15dp"
             android:backgroundTint="@color/dimgrey"
+            android:textColor="@color/lightgrey"
             android:hint="Sign up"
             android:textColorHint="@color/lightgrey"
             android:layout_centerHorizontal="true"

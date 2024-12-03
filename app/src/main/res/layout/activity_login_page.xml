@@ -83,6 +83,7 @@
             android:backgroundTint="@color/dimgrey"
             android:hint="Login"
             android:textColorHint="@color/lightgrey"
+            android:textColor="@color/lightgrey"
             android:layout_alignStart="@id/login_password"
             android:textSize="15sp" />
 
@@ -95,6 +96,7 @@
             android:layout_alignEnd="@id/login_password"
             android:layout_marginTop="25dp"
             android:backgroundTint="@color/dimgrey"
+            android:textColor="@color/lightgrey"
             android:hint="Sign up"
             android:textColorHint="@color/lightgrey"
             android:textSize="15sp" />
