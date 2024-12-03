@@ -41,7 +41,7 @@ Here are a few instructions that can guide you through using our application:
 	- "Pick-up Request": This button takes the user to a page where they are asked to input their next destination and which pick-up station they want to be picked up from.
 	- "News": This button takes you to the SafeRide website for the latest news and information.
 	- "About Us": This button takes you to a page that explains SafeRide's service and the page contains a button that redirects you to SafeRide's Messenger chat.
-4. If you tick the "I am a driver" box, then you will be automatically redirected to a separate set of activities/pages when "Log in" is pressed:
+4. If you tick the "I am a driver" box, you will be automatically redirected to a separate set of activities/pages when "Log in" is pressed:
 	- You, as the driver, will be redirected to a page containing images and license plate numbers of each SafeRide car.
 	- Once clicked, each car image will redirect you to another page containing image drop-boxes that require you to capture (or choose from gallery) and upload images of the four sides of the car that you will be driving for this shift.  You will be required to upload exactly four images to be able to proceed to the next page.
 	- Once that is done, you will be then redirected to another page that contains images of each pickup station.
