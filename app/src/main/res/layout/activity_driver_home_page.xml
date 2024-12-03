@@ -24,7 +24,7 @@
 
         <Button
             android:id="@+id/retrieveButton"
-            android:layout_width="160dp"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:text="Start Trip"
             android:backgroundTint="@color/dimgrey"
@@ -34,7 +34,7 @@
 
         <Button
             android:id="@+id/start_ride_button"
-            android:layout_width="160dp"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:text="Spreadsheet"
             android:backgroundTint="@color/dimgrey"
@@ -43,7 +43,7 @@
 
         <Button
             android:id="@+id/mapButton"
-            android:layout_width="160dp"
+            android:layout_width="180dp"
             android:layout_height="wrap_content"
             android:text="Google Maps"
             android:backgroundTint="@color/dimgrey"
