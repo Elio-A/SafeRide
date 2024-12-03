@@ -49,9 +49,6 @@
             android:name=".SafeRideCars"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
-            android:exported="false" />
-        <activity
             android:name=".HomePageActivity"
             android:exported="false" />
         <activity
@@ -59,9 +56,6 @@
             android:exported="false" />
         <activity
             android:name=".Aboutus"
-            android:exported="false" />
-        <activity
-            android:name=".QRCodeScanner"
             android:exported="false" />
         <activity
             android:name=".WorkingHours"

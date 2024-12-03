@@ -47,8 +47,6 @@ class NextTrip : AppCompatActivity() {
 
         locationViewModel = ViewModelProvider(this).get(LocationViewModel::class.java)
 
-        //dbLocationHelper.getAllRows()
-
         locationViewModel.locationLiveData.observe(this) { locations ->
             try {
                 if (locations.isNotEmpty()) {

@@ -87,7 +87,6 @@ class Next_Pickup : AppCompatActivity() {
         val recyclerView: RecyclerView = findViewById(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(this)
 
-        // Pass the updated list of stations to the adapter
         val stationAdapter = StationAdapter(stations)
         recyclerView.adapter = stationAdapter
 

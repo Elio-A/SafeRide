@@ -72,7 +72,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="30dp"
                 android:text="@string/front_view"
-                android:textColor="@color/white"
+                android:textColor="@color/lightgrey"
                 android:textSize="20sp" />
 
             <FrameLayout
@@ -113,7 +113,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="30dp"
                 android:text="@string/right_view"
-                android:textColor="@color/white"
+                android:textColor="@color/lightgrey"
                 android:textSize="20sp" />
 
             <FrameLayout
@@ -154,7 +154,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="30dp"
                 android:text="@string/back_text"
-                android:textColor="@color/white"
+                android:textColor="@color/lightgrey"
                 android:textSize="20sp" />
 
             <FrameLayout
@@ -195,7 +195,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="30dp"
                 android:text="@string/left_view"
-                android:textColor="@color/white"
+                android:textColor="@color/lightgrey"
                 android:textSize="20sp" />
 
             <FrameLayout
@@ -236,8 +236,9 @@
                 android:layout_below="@id/LeftPicture"
                 android:layout_marginTop="30dp"
                 android:layout_centerHorizontal="true"
-                android:backgroundTint="@color/saferide_orange"
+                android:backgroundTint="@color/dimgrey"
                 android:enabled="true"
+                android:textColor="@color/lightgrey"
                 android:layout_marginBottom="30dp"
                 android:text="@string/continue_next" />
 

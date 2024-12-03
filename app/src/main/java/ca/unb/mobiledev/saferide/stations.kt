@@ -1,6 +1,7 @@
 package ca.unb.mobiledev.saferide
 
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageButton
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -18,7 +19,7 @@ class stations : AppCompatActivity() {
             insets
         }
 
-        val backToHome : ImageButton = findViewById(R.id.back_to_home_button)
+        val backToHome = findViewById<Button>(R.id.backButton)
         backToHome.setOnClickListener{
             finish()
         }

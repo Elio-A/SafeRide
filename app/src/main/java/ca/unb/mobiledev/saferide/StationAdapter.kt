@@ -25,7 +25,6 @@ class StationAdapter(private val stations: List<Map<String, Any>>) : RecyclerVie
         val waitTime = station["waitTime"] as Int
         val license = station["license"] as String
 
-        // Pass the values to bind
         holder.bind(image, headline, stationName, status, seats, waitTime, license)
     }
 

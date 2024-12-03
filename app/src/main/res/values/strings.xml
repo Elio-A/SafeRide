@@ -56,8 +56,8 @@
     <string-array name="spinner_items">
         <item>Select Station</item>
         <item>Student Union Building</item>
-        <item>Science Building (I.U.C)</item>
-        <item>Sir James Dunn Hall</item>
+        <item>Science Library (I.U.C)</item>
+        <item>Sir James Dunn Hall (STU)</item>
     </string-array>
 
 </resources>

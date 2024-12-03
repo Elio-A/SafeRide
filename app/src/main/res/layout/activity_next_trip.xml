@@ -75,7 +75,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="20dp"
-            android:backgroundTint="@color/saferide_orange"
+            android:backgroundTint="@color/dimgrey"
             android:layout_gravity="center_horizontal"
             android:text="@string/completed" />
 

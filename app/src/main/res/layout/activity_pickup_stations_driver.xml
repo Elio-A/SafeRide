@@ -84,7 +84,7 @@
                 android:layout_marginTop="10dp"
                 android:layout_below="@id/imageButtonSUB"
                 android:text="@string/student_union_building"
-                android:textColor="@color/white"
+                android:textColor="@color/lightgrey"
                 android:textSize="20sp" />
 
 
@@ -109,7 +109,7 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
                 android:text="@string/science_library_i_u_c"
-                android:textColor="@color/white"
+                android:textColor="@color/lightgrey"
                 android:textSize="20sp" />
 
 
@@ -133,10 +133,10 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginTop="10dp"
                 android:text="Sir James Dunn Hall (STU)"
-                android:textColor="@color/white"
+                android:textColor="@color/lightgrey"
+                android:layout_marginBottom="20dp"
                 android:textSize="20sp" />
 
         </RelativeLayout>
-
     </ScrollView>
 </androidx.constraintlayout.widget.ConstraintLayout>

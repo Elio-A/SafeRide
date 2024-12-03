@@ -23,31 +23,31 @@
             android:layout_marginBottom="15dp"/>
 
         <Button
-            android:id="@+id/start_ride_button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Open Spreadsheet"
-            android:backgroundTint="@color/dimgrey"
-            android:textColor="@color/saferide_orange"
-            android:textSize="18sp"/>
-
-        <Button
             android:id="@+id/retrieveButton"
-            android:layout_width="wrap_content"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
-            android:text="Retrieve Next Trip"
+            android:text="Start Trip"
             android:backgroundTint="@color/dimgrey"
-            android:textColor="@color/saferide_orange"
+            android:textColor="@color/lightgrey"
             android:textSize="18sp"
             />
 
         <Button
+            android:id="@+id/start_ride_button"
+            android:layout_width="160dp"
+            android:layout_height="wrap_content"
+            android:text="Spreadsheet"
+            android:backgroundTint="@color/dimgrey"
+            android:textColor="@color/lightgrey"
+            android:textSize="18sp"/>
+
+        <Button
             android:id="@+id/mapButton"
-            android:layout_width="wrap_content"
+            android:layout_width="160dp"
             android:layout_height="wrap_content"
             android:text="Google Maps"
             android:backgroundTint="@color/dimgrey"
-            android:textColor="@color/saferide_orange"
+            android:textColor="@color/lightgrey"
             android:textSize="18sp"/>
 
         <Button
@@ -56,7 +56,7 @@
             android:layout_height="wrap_content"
             android:text="Log Out"
             android:backgroundTint="@color/dimgrey"
-            android:textColor="@color/saferide_orange"
+            android:textColor="@color/lightgrey"
             android:textSize="18sp"/>
     </LinearLayout>
 </RelativeLayout>

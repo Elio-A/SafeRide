@@ -29,9 +29,7 @@ class ManualInput : AppCompatActivity() {
         val userID = intent.getStringExtra("KEY_ID")?: "No User"
 
         if(userID == "No User"){
-            Toast.makeText(this, "USER ID NOT HERE", Toast.LENGTH_SHORT).show()
-        } else {
-            Toast.makeText(this, userID, Toast.LENGTH_SHORT).show()
+            Toast.makeText(this, "INVALID USER", Toast.LENGTH_SHORT).show()
         }
 
         dbHelper = LocationHelper(this)
@@ -67,9 +65,7 @@ class ManualInput : AppCompatActivity() {
                     Toast.makeText(this, "Location added", Toast.LENGTH_SHORT).show()
                 }
             }
-            //Log.i(TAG, "Input: $selectedItem")
-
+            finish()
         }
-
     }
 }
