@@ -11,12 +11,12 @@ This is an Android application designed for UNB's CS2063 Course.  More specifica
 
 ## Features
 
-- Feature 1: The application makes use of various SQLite functionality to store, and retrieve information about users. (Login & Signup are an example of this feature)
-- Feature 2: Users can input their next destination and select which station to be picked up from. Driver will then retrieve their next passengers from the database and see their destinations
+- Feature 1: The application makes use of various SQLite functionality to store, and retrieve information about users. (Login & Signup are an example of this feature).
+- Feature 2: Users can input their next destination and select which station to be picked up from. Driver will then retrieve their next passengers' information from the database, at which point they can see their destinations.
 - Feature 3: On the passenger side, the application is able to open a QR code scanner.
-- Feature 4: On the driver side, the application generates a QR code that is to be scanned by the passengers
-- Feature 5: Users have all information about what is SafeRide and how to access it, including stations, working hours and radius
-- Feature 6: Users can see the status of stations and their vehicles. They can see if the driver is at the station, or is on a trip, and if so, they can see an estimate of how long they would need
+- Feature 4: On the driver side, the application generates a QR code that is to be scanned by the passengers.
+- Feature 5: The application provide users with all available information surrounding the SafeRide service. This includes pick-up stations, working hours, the radius the drivers must follow, and more.
+- Feature 6: The application provides users with the status of the drivers. This information includes whether the driver is at their designated station or out on a trip. If the driver is out on a trip, the application displays an estimate of how long the driver would need to be back at the station to the next passengers.
 
 ## Installation
 
@@ -32,27 +32,28 @@ Here are a few instructions that can guide you through using our application:
 
 1. Start the application and click on signup to create an account.
 2. Once account has been created, you will be redirected to the login page.
-3. After logging in successfully as a passenger, you will see a list of different buttons that do different things:
-	- "Live Status": This button displays the live status of all the drivers, and at which station the soonest next available driver will be.
-	- "Pickup Stations": This button displays where each station is around campus via pin-points on a map and text explanation of where each station is.
-	- "Radius": This button takes you to a picture of a map that highlights the radius that SafeRide drivers must not exceed, any location within this radius would be ok 	   to reach by the drivers.
+3. After logging in as a passenger, you will see a list of different buttons that do the following:
+	- "Live Status": This button displays the live status of all the drivers. The passenger can see which driver will be available the soonest.
+	- "Pickup Stations": This button displays where each station is located around campus via pin-points on a map. A picture of each station is also displayed to replicate a street vue.
+	- "Radius": This button redirects you to a picture of a map, showing the permited radius that the driver must follow.
 	- "Working Hours": This button takes you to a page that contains text information about the working hours that each pickup station follows.
-	- "QR Code": This button starts a QR code scanner that is able to scan any QR code, and then redirect the user to the link that is linked to the QR code.
-	- "Manual Input": This button takes the user straight to the Google spreadsheet that users input their information in.  This is a "fail-safe" in the cases where 	   passengers are unable to use the QR code scanner.
+	- "QR Code": This button starts a QR code scanner. The intention of this QR code scanner is to scan the QR code generated on the driver side, which takes the passenger to the shared Google spreadsheet.
+	- "Pick-up Request": This button takes the user to a page where they are asked to input their next destination and which pick-up station they want to be picked up from.
 	- "News": This button takes you to the SafeRide website for the latest news and information.
-	- "About Us": This button takes you to a page that explains what the SafeRide service is, and contains a button that redirects you to the SafeRide IDK.......
+	- "About Us": This button takes you to a page that explains what the SafeRide service is, and contains a button that redirects you to the SafeRide's Messenger chat.
 4. If you ticked the "I am a driver" box, then after login you will be automatically redirected to a separate set of activities/pages:
 	- You, as the driver, will be redirected to a page containing images and license plate numbers of each SafeRide car.
-	- Once clicked, the car images will redirect you to another page containing image drop-boxes that require you to take and upload images of the four sides of the car 	  that you will be driving for this shift.  You will be required to upload exactly four images to be able to proceed to the next page.
+	- Once clicked, each car image will redirect you to another page containing image drop-boxes that require you to capture (or choose from gallery) and upload images of the four sides of the car that you will be driving for this shift.  You will be required to upload exactly four images to be able to proceed to the next page.
 	- Once that is done, you will be then redirected to another page that contains images of each pickup station.
-	- once you click which station you will be working from this shift, you will finally be redirected to the driver home page which contains a QR code that passengers 	  can scan, a "Start Ride" button, and a "Log Out" button.
-		- The "Start Ride" button redirects you to the shared Google spreadsheet that contains the passengers' information required to start the ride
-		- The "Log Out" button prompts a Confirm Logout message.  If you agree to logging out, you are redirected the first page of this application; the login page.
-
+	- Once you click which station you will be working from, you will finally be redirected to the driver home page which contains a QR code that passengers can scan and:
+		- a "Start Trip" button which retrieves the passenger ID and the destination of each passenger in your vehicle,
+		- a "Spreadsheet" button that redirects you to the same shared Google spreadsheet that the QR code is linked to,
+		- a "Google Maps" button that opens Google Maps with Fredericton as the preset view; If Google Maps is not downloaded, you will be asked to do so,
+		- and a "Log Out" button.
 ## Contact
 
 Here are the emails of all three contributors to this project:
 
 1. kalhindi@unb.ca
 2. ealalam@unb.ca
-3. akoesoema@unb.ca
+3. albertus.university@unb.ca
