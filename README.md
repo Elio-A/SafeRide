@@ -5,7 +5,6 @@ This is an Android application designed for UNB's CS2063 Course.  More specifica
 ## Table of Contents
 
 - [Features](#features)
-- [Installation](#installation)
 - [Usage](#usage)
 - [Contact](#contact)
 
@@ -17,14 +16,6 @@ This is an Android application designed for UNB's CS2063 Course.  More specifica
 - Feature 4: On the driver side, the application generates a QR code that is to be scanned by the passengers.
 - Feature 5: The application provides users with all available information surrounding the SafeRide services. This includes pick-up stations, working hours, the radius the drivers must follow, and more.
 - Feature 6: The application provides users with the status of the drivers. This information includes whether the driver is at their designated station or out on a trip. If the driver is out on a trip, the application displays an estimate of how long the driver would need to be back at the station for the next passengers.
-
-## Installation
-
-Follow these steps to install the SafeRide application:
-
-Clone the repository:
-'''bash
-git clone 
 
 ## Usage
 
