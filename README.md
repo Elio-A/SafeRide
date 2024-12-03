@@ -44,7 +44,7 @@ Here are a few instructions that can guide you through using our application:
 4. If you tick the "I am a driver" box, you will be automatically redirected to a separate set of activities/pages when "Log in" is pressed:
 	- You, as the driver, will be redirected to a page containing images and license plate numbers of each SafeRide car.
 	- Once clicked, each car image will redirect you to another page containing image drop-boxes that require you to capture (or choose from gallery) and upload images of the four sides of the car that you will be driving for this shift.  You will be required to upload exactly four images to be able to proceed to the next page.
-	- Once that is done, you will be then redirected to another page that contains images of each pickup station.
+	- Once that is done, you will be redirected to another page that contains images of each pickup station.
 	- Once you click which station you will be working from, you will finally be redirected to the driver home page which contains a QR code that passengers can scan and:
 		- a "Start Trip" button which retrieves the passenger ID and the destination of each passenger in your vehicle,
 		- a "Spreadsheet" button that redirects you to the same shared Google spreadsheet that the QR code is linked to,
